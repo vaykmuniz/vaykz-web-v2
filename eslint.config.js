@@ -18,19 +18,34 @@ export default defineConfig(
 	prettier,
 	...svelte.configs.prettier,
 	{
+		plugins: ['import', 'unused-imports'],
 		languageOptions: {
 			globals: { ...globals.browser, ...globals.node }
 		},
-		rules: { // typescript-eslint strongly recommend that you do not use the no-undef lint rule on TypeScript projects.
-		// see: https://typescript-eslint.io/troubleshooting/faqs/eslint/#i-get-errors-from-the-no-undef-rule-about-global-variables-not-being-defined-even-though-there-are-no-typescript-errors
-		"no-undef": 'off' }
+		rules: {
+			'no-undef': 'off',
+			'unused-imports/no-unused-imports': 'error',
+			'unused-imports/no-unused-vars': [
+				'warn',
+				{
+					vars: 'all',
+					varsIgnorePattern: '^_',
+					args: 'after-used',
+					argsIgnorePattern: '^_'
+				}
+			],
+			'import/order': [
+				'warn',
+				{
+					groups: ['builtin', 'external', 'internal', ['parent', 'sibling', 'index']],
+					'newlines-between': 'always'
+				}
+			],
+			'svelte/no-at-html-tags': 'error'
+		}
 	},
 	{
-		files: [
-			'**/*.svelte',
-			'**/*.svelte.ts',
-			'**/*.svelte.js'
-		],
+		files: ['**/*.svelte'],
 		languageOptions: {
 			parserOptions: {
 				projectService: true,

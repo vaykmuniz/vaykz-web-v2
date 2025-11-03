@@ -6,7 +6,7 @@
 <div class="m-8 flex gap-3 p-8">
 	<img src={mePhoto} alt="Gabriel R. A. S. Muniz" class="mx-auto mb-4 h-28 w-28 rounded-3xl" />
 	<div class="flex flex-col items-start">
-		<h1 class="text-4xl font-bold">Gabriel R. A. S. Muniz</h1>
+		<h1 class="text-4xl font-bold">Gabriel Muniz</h1>
 		<p class="">Software Developer</p>
 		<div class="mt-1">
 			{#each MY_LINKS as link}

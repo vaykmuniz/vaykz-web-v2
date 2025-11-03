@@ -1,5 +1,5 @@
 <script lang="ts">
-	import ExperienceSection from "$lib/components/experience-section/+experience-section.svelte";
+	import ExperienceSection from "$lib/components/sections/experience/+experience-section.svelte";
 
 </script>
 
