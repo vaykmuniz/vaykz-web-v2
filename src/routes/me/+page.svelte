@@ -3,6 +3,6 @@
 
 </script>
 
-<section class="w-full h-full">
+<section class="w-full h-max bg-slate-600">
     <ExperienceSection />
 </section>

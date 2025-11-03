@@ -1,8 +1,10 @@
 <script lang="ts">
 	import Presentation from "$lib/components/sections/presentation/+presentation.svelte";
+	import Navbar from '$lib/components/navbar/+navbar.svelte';
 
 </script>
 
-<section class="my-auto flex h-full w-full items-center justify-center bg-sky-200">
+<div class="flex flex-col h-full w-full items-center justify-start bg-slate-600">
+	<Navbar />
 	<Presentation />
-</section>
+</div>
