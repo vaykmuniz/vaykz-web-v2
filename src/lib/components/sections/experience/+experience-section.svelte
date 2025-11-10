@@ -2,19 +2,16 @@
 	import { EXPERIENCES } from './experience.const';
 </script>
 
-<section class="h-max w-full flex flex-col items-center justify-center gap-4 px-8">
-	<h3 class="text-2xl my-8 text-start w-full">Experience</h3>
+<section class="flex h-max w-full flex-col items-center justify-center gap-2">
+	<h3 class="text-3xl mt-8 mb-4">Experience</h3>
 	{#each EXPERIENCES as experience}
 		<details
-			class="w-fit rounded-lg border-2 bg-sky-200 text-slate-600 px-5 text-start transition-all duration-300 cursor-pointer"
+			class="flex w-full cursor-pointer flex-col items-center justify-center px-5 text-start transition-all duration-300"
 		>
-			<summary
-				class="flex flex-col py-2 text-xl transition-all duration-800"
-			>
-				<span class="font-semibold">{experience.position} at {experience.company}</span>
+			<summary class="flex flex-col py-2 text-xl transition-all duration-800">
+				<p>{experience.position} at <span class="font-bold">{experience.company}</span></p>
 				<p class="text-sm uppercase">{experience.period}</p>
 			</summary>
-
 			<p class="p-2">{experience.description}</p>
 		</details>
 	{/each}

@@ -1,23 +1,35 @@
 <script lang="ts">
 	import mePhoto from '$lib/assets/me.png';
 	import { MY_LINKS } from './my-links.const';
+
+	const TITLES = ['Engineer', 'Automation', 'Software'];
 </script>
 
-<section class="flex h-full items-center justify-center text-sky-200">
-	<div class="flex flex-col">
-		<div class="flex gap-3">
-			<img src={mePhoto} alt="Gabriel R. A. S. Muniz" class="mx-auto mb-4 h-28 w-28 rounded-4xl" />
-			<div class="flex flex-col items-start">
-				<h1 class="text-4xl font-bold">Gabriel Muniz</h1>
-				<p class="">Software Developer</p>
-			</div>
-		</div>
-		<div>
-			{#each MY_LINKS as link}
-				<a href={link.url} target="_blank" class=" font-bold mr-2 rounded-4xl border-2 border-sky-200 opacity-50 px-6 py-1.5 hover:opacity-100 transition-all duration-800">
-					{link.label}
-				</a>
+<section class="flex h-full w-full flex-col items-center justify-center text-sky-200">
+	<img src={mePhoto} alt="Gabriel R. A. S. Muniz" class="h-28 w-28 rounded-4xl" />
+
+	<div class="my-4 flex flex-col items-center">
+		<h1
+			class="font-serif text-4xl font-bold opacity-50 transition-all duration-500 hover:opacity-100"
+		>
+			Gabriel Muniz
+		</h1>
+		<div class="flex gap-2">
+			{#each TITLES as title}
+				<p class="opacity-50 transition-all duration-500 hover:opacity-100">{title}</p>
 			{/each}
 		</div>
+	</div>
+
+	<div>
+		{#each MY_LINKS as link}
+			<a
+				href={link.url}
+				target="_blank"
+				class="mr-2 rounded-4xl border-2 border-sky-200 px-6 py-1.5 font-bold opacity-50 transition-all duration-500 hover:opacity-100"
+			>
+				{link.label}
+			</a>
+		{/each}
 	</div>
 </section>
