@@ -2,6 +2,7 @@
 	import Navbar from "$lib/components/navbar/+navbar.svelte";
 	import SoftwareSection from "$lib/components/sections/software/+software.svelte";
     import EngineerSection from "$lib/components/sections/engineer/+engineer.svelte";
+    import GameSection from "$lib/components/sections/game/+game.svelte";
 
 </script>
 
@@ -9,4 +10,5 @@
     <Navbar />
     <EngineerSection />
     <SoftwareSection />
+    <GameSection />
 </section>
