@@ -6,7 +6,7 @@
 	<h3 class="font-serif text-2xl">Software Development</h3>
 	{#each EXPERIENCES as experience}
 		<div
-			class="flex w-full cursor-pointer flex-col text-start"
+			class="flex w-full flex-col text-start"
 		>
 			<div class="flex flex-col py-2">
 				<h4 class="font-serif">{experience.position} at <span class="font-semibold font-mono">{experience.company}</span></h4>
