@@ -10,5 +10,20 @@
 				Federal University of Technology – Paraná (UTFPR)</a
 			>.
 		</p>
+
+		<div class="ml-5 mt-5 flex flex-col gap-3">
+			<h4 class="text-xl">Bachelors at Control and Automation Engineer</h4>
+			<p class="italic">
+				During my course, I had the opportunity to work on various projects involving embedded
+				systems, automation, and control systems. I gained hands-on experience with
+				microcontrollers, PLCs, and industrial communication protocols.
+			</p>
+
+			<h4 class="text-xl">Scientific Research Internship</h4>
+			<p class="italic">
+				Development of a high voltage power-supply operating in DCM for PFC (Power Factor
+				Correction).
+			</p>
+		</div>
 	</section>
 </div>
