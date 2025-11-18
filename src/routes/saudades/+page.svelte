@@ -8,4 +8,5 @@
 		<h1 class="font-serif text-2xl">Saudades Gamez</h1>
 		<p class="mt-2 italic">HERE IS THE GOOD PART!</p>
 	</section>
+	<iframe src="/godot/web.html" title='Tarot Game' class="w-full h-[600px] border-none" />
 </div>
