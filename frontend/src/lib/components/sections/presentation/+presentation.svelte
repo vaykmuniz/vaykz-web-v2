@@ -6,7 +6,11 @@
 </script>
 
 <section class="flex h-full w-full flex-col items-center justify-center text-sky-200">
-	<img src={mePhoto} alt="Gabriel R. A. S. Muniz" class="h-28 w-28 rounded-4xl" />
+	<img
+		src={mePhoto}
+		alt="Gabriel R. A. S. Muniz"
+		class="h-28 w-28 rounded-2xl border-2 border-sky-100/40 shadow-xs"
+	/>
 
 	<div class="my-4 flex flex-col items-center">
 		<h1

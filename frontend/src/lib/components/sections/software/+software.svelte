@@ -1,4 +1,4 @@
-<script type="ts">
+<script lang="ts">
 	import { EXPERIENCES } from './experience.const';
 </script>
 
