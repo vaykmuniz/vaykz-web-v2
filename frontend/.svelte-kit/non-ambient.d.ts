@@ -39,6 +39,6 @@ declare module "$app/types" {
 		};
 		Pathname(): "/" | "/about" | "/about/" | "/saudades" | "/saudades/" | "/saudades/autobattler" | "/saudades/autobattler/";
 		ResolvedPathname(): `${"" | `/${string}`}${ReturnType<AppTypes['Pathname']>}`;
-		Asset(): "/godot/web.apple-touch-icon.png" | "/godot/web.audio.position.worklet.js" | "/godot/web.audio.worklet.js" | "/godot/web.html" | "/godot/web.icon.png" | "/godot/web.js" | "/godot/web.pck" | "/godot/web.png" | "/godot/web.wasm" | "/robots.txt" | string & {};
+		Asset(): "/autobattler/autobattler.apple-touch-icon.png" | "/autobattler/autobattler.audio.position.worklet.js" | "/autobattler/autobattler.audio.worklet.js" | "/autobattler/autobattler.html" | "/autobattler/autobattler.icon.png" | "/autobattler/autobattler.js" | "/autobattler/autobattler.pck" | "/autobattler/autobattler.png" | "/autobattler/autobattler.wasm" | "/godot/web.apple-touch-icon.png" | "/godot/web.audio.position.worklet.js" | "/godot/web.audio.worklet.js" | "/godot/web.html" | "/godot/web.icon.png" | "/godot/web.js" | "/godot/web.pck" | "/godot/web.png" | "/godot/web.wasm" | "/robots.txt" | string & {};
 	}
 }

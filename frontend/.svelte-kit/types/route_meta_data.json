@@ -1,7 +1,8 @@
 {
 	"/": [],
 	"/about": [],
-	"/saudades": [
-		"src/routes/saudades/+page.ts"
+	"/saudades": [],
+	"/saudades/autobattler": [
+		"src/routes/saudades/autobattler/+page.ts"
 	]
 }
