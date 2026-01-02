@@ -27,16 +27,17 @@ export {};
 
 declare module "$app/types" {
 	export interface AppTypes {
-		RouteId(): "/" | "/about" | "/saudades";
+		RouteId(): "/" | "/about" | "/saudades" | "/saudades/autobattler";
 		RouteParams(): {
 			
 		};
 		LayoutParams(): {
 			"/": Record<string, never>;
 			"/about": Record<string, never>;
-			"/saudades": Record<string, never>
+			"/saudades": Record<string, never>;
+			"/saudades/autobattler": Record<string, never>
 		};
-		Pathname(): "/" | "/about" | "/about/" | "/saudades" | "/saudades/";
+		Pathname(): "/" | "/about" | "/about/" | "/saudades" | "/saudades/" | "/saudades/autobattler" | "/saudades/autobattler/";
 		ResolvedPathname(): `${"" | `/${string}`}${ReturnType<AppTypes['Pathname']>}`;
 		Asset(): "/godot/web.apple-touch-icon.png" | "/godot/web.audio.position.worklet.js" | "/godot/web.audio.worklet.js" | "/godot/web.html" | "/godot/web.icon.png" | "/godot/web.js" | "/godot/web.pck" | "/godot/web.png" | "/godot/web.wasm" | "/robots.txt" | string & {};
 	}
