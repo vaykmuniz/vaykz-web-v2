@@ -1,8 +1,9 @@
 <script lang="ts">
+	import { t } from '$lib/i18n/translations';
 	import mePhoto from '$lib/assets/me.png';
 	import { MY_LINKS } from './my-links.const';
 
-	const TITLES = ['Engineer', 'Automation', 'Software'];
+	$: TITLES = [$t("home.titles_1"), $t("home.titles_2"), $t("home.titles_3")];
 </script>
 
 <section class="flex h-full w-full flex-col items-center justify-center text-sky-200">
