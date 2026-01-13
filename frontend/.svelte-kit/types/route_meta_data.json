@@ -2,7 +2,6 @@
 	"/": [],
 	"/about": [],
 	"/saudades": [],
-	"/saudades/autobattler": [
-		"src/routes/saudades/autobattler/+page.ts"
-	]
+	"/saudades/autobattler": [],
+	"/saudades/tarot": []
 }
