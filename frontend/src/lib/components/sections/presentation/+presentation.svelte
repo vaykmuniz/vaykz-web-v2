@@ -6,7 +6,7 @@
 	$: TITLES = [$t("home.titles_1"), $t("home.titles_2"), $t("home.titles_3")];
 </script>
 
-<section class="flex h-full w-full flex-col items-center justify-center text-sky-200">
+<section class="flex h-full w-full flex-col items-center justify-center">
 	<img
 		src={mePhoto}
 		alt="Gabriel R. A. S. Muniz"

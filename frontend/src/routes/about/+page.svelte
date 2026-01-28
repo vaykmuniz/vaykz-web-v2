@@ -1,14 +1,10 @@
 <script lang="ts">
-	import Navbar from "$lib/components/navbar/+navbar.svelte";
-	import SoftwareSection from "$lib/components/sections/software/+software.svelte";
-    import EngineerSection from "$lib/components/sections/engineer/+engineer.svelte";
-    import GameSection from "$lib/components/sections/game/+game.svelte";
-
+  import { t } from "$lib/i18n/translations";
 </script>
 
-<section class="w-full h-full bg-slate-600 text-sky-200">
-    <Navbar />
-    <EngineerSection />
-    <SoftwareSection />
-    <GameSection />
-</section>
+<div class="flex flex-col gap-4">
+<h1>Eu sou blablblaa</h1>
+<a href="/engineering">{$t("home.titles_1")}</a>
+<a href="/software">{$t("home.titles_3")}</a>
+<a href="/game">{$t("home.titles_2")}</a>
+</div>

@@ -27,18 +27,21 @@ export {};
 
 declare module "$app/types" {
 	export interface AppTypes {
-		RouteId(): "/" | "/about" | "/saudades" | "/saudades/autobattler" | "/saudades/tarot";
+		RouteId(): "/" | "/about" | "/about/engineering" | "/about/game" | "/about/software" | "/saudades" | "/saudades/autobattler" | "/saudades/tarot";
 		RouteParams(): {
 			
 		};
 		LayoutParams(): {
 			"/": Record<string, never>;
 			"/about": Record<string, never>;
+			"/about/engineering": Record<string, never>;
+			"/about/game": Record<string, never>;
+			"/about/software": Record<string, never>;
 			"/saudades": Record<string, never>;
 			"/saudades/autobattler": Record<string, never>;
 			"/saudades/tarot": Record<string, never>
 		};
-		Pathname(): "/" | "/about" | "/about/" | "/saudades" | "/saudades/" | "/saudades/autobattler" | "/saudades/autobattler/" | "/saudades/tarot" | "/saudades/tarot/";
+		Pathname(): "/" | "/about" | "/about/" | "/about/engineering" | "/about/engineering/" | "/about/game" | "/about/game/" | "/about/software" | "/about/software/" | "/saudades" | "/saudades/" | "/saudades/autobattler" | "/saudades/autobattler/" | "/saudades/tarot" | "/saudades/tarot/";
 		ResolvedPathname(): `${"" | `/${string}`}${ReturnType<AppTypes['Pathname']>}`;
 		Asset(): "/autobattler/autobattler.apple-touch-icon.png" | "/autobattler/autobattler.audio.position.worklet.js" | "/autobattler/autobattler.audio.worklet.js" | "/autobattler/autobattler.html" | "/autobattler/autobattler.icon.png" | "/autobattler/autobattler.js" | "/autobattler/autobattler.pck" | "/autobattler/autobattler.png" | "/autobattler/autobattler.wasm" | "/robots.txt" | "/tarot/web.apple-touch-icon.png" | "/tarot/web.audio.position.worklet.js" | "/tarot/web.audio.worklet.js" | "/tarot/web.html" | "/tarot/web.icon.png" | "/tarot/web.js" | "/tarot/web.pck" | "/tarot/web.png" | "/tarot/web.wasm" | string & {};
 	}
