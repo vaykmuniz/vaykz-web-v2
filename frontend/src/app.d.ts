@@ -10,4 +10,10 @@ declare global {
 	}
 }
 
+declare module '*.svg' {
+  import type { ComponentType } from 'svelte'
+  const content: ComponentType
+  export default content
+}
+
 export {};
