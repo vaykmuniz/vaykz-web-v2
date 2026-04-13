@@ -24,13 +24,14 @@
 <style>
 
 @keyframes glitch {
-  50% {
+  80% {}
+  90% {
     transform: skew(180deg);
   }
 }
 
 .glitch {
-  animation: glitch 2000ms var(--ease-elastic-in-1, ease-in-out) infinite;
+  animation: glitch 5000ms var(--ease-elastic-in-1, ease-in-out) infinite;
 }
 
 </style>
