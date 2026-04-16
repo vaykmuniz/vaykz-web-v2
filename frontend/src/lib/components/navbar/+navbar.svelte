@@ -11,9 +11,9 @@
 	<img alt="my-cat-koji-icon" src={koji}  class="h-14"/>
 	
 	<div class="flex gap-8 text-sm md:text-lg">
-	  <a href="/" class={underline}> .home </a>
-    <a href="/about" class={underline}> /about </a>
-    <a href="/saudades" class={underline}> /saudades games </a>
+		<a href="/" class={underline}> .home </a>
+		<a href="/about" class={underline}> /about </a>
+		<a href="/saudades" class={underline}> /saudades games </a>
 	</div>
 
   <div class="flex gap-2">

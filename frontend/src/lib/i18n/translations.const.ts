@@ -14,6 +14,8 @@ const translations: Translations = {
     "home.engineer.bachelors.title": "Bachelors at Control and Automation Engineer",
     "home.engineer.internship.title": "Scientific Research Internship",
     "home.engineer.internship.description": "Development of a high voltage power-supply operating in DCM for PFC (Power Factor Correction).",
+    "home.about_me_title": "About me",
+    "home.about_me_description": "Description"
   },
   es: {
     "home.titles_1": "Ingeniero",
@@ -26,11 +28,13 @@ const translations: Translations = {
     "home.engineer.paragraph_3": "Desarrollo de una fuente de alimentación de alto voltaje que opera en DCM para PFC (Corrección del Factor de Potencia).",
     "home.engineer.bachelors.title": "Licenciatura en Ingeniería de Control y Automatización",
     "home.engineer.internship.title": "Pasantía de Investigación Científica",
-    "home.engineer.internship.description": "Desarrollo de una fuente de alimentación de alto voltaje que opera en DCM para PFC (Corrección del Factor de Potencia)."
+    "home.engineer.internship.description": "Desarrollo de una fuente de alimentación de alto voltaje que opera en DCM para PFC (Corrección del Factor de Potencia).",
+    "home.about_me_title": "About me",
+    "home.about_me_description": "Description"
   },
   br: {
     "home.titles_1": "Engenharia",
-    "home.titles_2": "Controle + Automação",
+    "home.titles_2": "Controle e Automação",
     "home.titles_3": "Desenvolvimento de Software",
     "home.engineer.title": "Engenheiro de Controle e Automação",
     "home.engineer.paragraph_1": "Minha experiência vem da graduação em Engenharia de Controle e Automação na",
@@ -39,7 +43,9 @@ const translations: Translations = {
     "home.engineer.paragraph_3": "Desenvolvimento de uma fonte de alimentação de alta tensão operando em DCM para PFC (Correção do Fator de Potência).",
     "home.engineer.bachelors.title": "Graduação em Engenharia de Controle e Automação",
     "home.engineer.internship.title": "Estágio em Pesquisa Científica",
-    "home.engineer.internship.description": "Desenvolvimento de uma fonte de alimentação de alta tensão operando em DCM para PFC (Correção do Fator de Potência)."
+    "home.engineer.internship.description": "Desenvolvimento de uma fonte de alimentação de alta tensão operando em DCM para PFC (Correção do Fator de Potência).",
+    "home.about_me_title": "Sobre mim",
+    "home.about_me_description": "Description"
   }
 };
 
