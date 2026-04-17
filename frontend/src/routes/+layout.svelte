@@ -2,6 +2,7 @@
 	import '../app.css';
 	import favicon from '$lib/assets/favicon.png';
 	import Navbar from '$lib/components/navbar/+navbar.svelte';
+	import Footer from '$lib/components/footer/+footer.svelte';
 
 	let { children } = $props();
 </script>
@@ -10,9 +11,10 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-<div class="flex flex-col h-full w-full items-center justify-start bg-black font-serif">
+<div class="flex flex-col h-full w-full items-center justify-start bg-black font-oswald">
 	<Navbar />
 	<div class="overflow-y-auto w-full h-full text-sky-200">
 		{@render children?.()}
 	</div>
+	<Footer />
 </div>
