@@ -15,7 +15,7 @@ const translations: Translations = {
     "home.engineer.internship.title": "Scientific Research Internship",
     "home.engineer.internship.description": "Development of a high voltage power-supply operating in DCM for PFC (Power Factor Correction).",
     "home.about_me_title": "About me",
-    "home.about_me_description": "Description"
+    "home.about_me_description": "Hungry for challenges and with an insatiable desire for knowledge, i'm always bringing new ideas to my peers so we can promote and environment of constant evolution and share."
   },
   es: {
     "home.titles_1": "Ingeniero",

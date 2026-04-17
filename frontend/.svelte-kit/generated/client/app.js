@@ -7,23 +7,17 @@ export const nodes = [
 	() => import('./nodes/3'),
 	() => import('./nodes/4'),
 	() => import('./nodes/5'),
-	() => import('./nodes/6'),
-	() => import('./nodes/7'),
-	() => import('./nodes/8'),
-	() => import('./nodes/9')
+	() => import('./nodes/6')
 ];
 
 export const server_loads = [];
 
 export const dictionary = {
 		"/": [2],
-		"/about": [3],
-		"/about/engineering": [4],
-		"/about/game": [5],
-		"/about/software": [6],
-		"/saudades": [7],
-		"/saudades/autobattler": [8],
-		"/saudades/tarot": [9]
+		"/saudades": [3],
+		"/saudades/autobattler": [4],
+		"/saudades/tarot": [5],
+		"/work": [6]
 	};
 
 export const hooks = {
