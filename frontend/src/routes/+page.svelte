@@ -8,7 +8,7 @@
 
 	<div class="my-4 w-full flex flex-col items-start">
 		<h1
-			class="text-8xl md:text-4xl opacity-50 uppercase font-thin tracking-widest font-oswald"
+			class="text-4xl opacity-50 uppercase font-thin tracking-widest font-oswald"
 		>
 			gabriel r. a. s. muniz
 		</h1>
