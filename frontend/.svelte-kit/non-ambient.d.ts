@@ -27,18 +27,18 @@ export {};
 
 declare module "$app/types" {
 	export interface AppTypes {
-		RouteId(): "/" | "/saudades" | "/saudades/autobattler" | "/saudades/tarot" | "/work";
+		RouteId(): "/" | "/saudades" | "/saudades/games" | "/saudades/games/[slug]" | "/work";
 		RouteParams(): {
-			
+			"/saudades/games/[slug]": { slug: string }
 		};
 		LayoutParams(): {
-			"/": Record<string, never>;
-			"/saudades": Record<string, never>;
-			"/saudades/autobattler": Record<string, never>;
-			"/saudades/tarot": Record<string, never>;
+			"/": { slug?: string };
+			"/saudades": { slug?: string };
+			"/saudades/games": { slug?: string };
+			"/saudades/games/[slug]": { slug: string };
 			"/work": Record<string, never>
 		};
-		Pathname(): "/" | "/saudades" | "/saudades/" | "/saudades/autobattler" | "/saudades/autobattler/" | "/saudades/tarot" | "/saudades/tarot/" | "/work" | "/work/";
+		Pathname(): "/" | "/saudades" | "/saudades/" | "/saudades/games" | "/saudades/games/" | `/saudades/games/${string}` & {} | `/saudades/games/${string}/` & {} | "/work" | "/work/";
 		ResolvedPathname(): `${"" | `/${string}`}${ReturnType<AppTypes['Pathname']>}`;
 		Asset(): "/autobattler/autobattler.apple-touch-icon.png" | "/autobattler/autobattler.audio.position.worklet.js" | "/autobattler/autobattler.audio.worklet.js" | "/autobattler/autobattler.html" | "/autobattler/autobattler.icon.png" | "/autobattler/autobattler.js" | "/autobattler/autobattler.pck" | "/autobattler/autobattler.png" | "/autobattler/autobattler.wasm" | "/robots.txt" | "/tarot/web.apple-touch-icon.png" | "/tarot/web.audio.position.worklet.js" | "/tarot/web.audio.worklet.js" | "/tarot/web.html" | "/tarot/web.icon.png" | "/tarot/web.js" | "/tarot/web.pck" | "/tarot/web.png" | "/tarot/web.wasm" | string & {};
 	}

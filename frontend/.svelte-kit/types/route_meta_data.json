@@ -1,7 +1,8 @@
 {
 	"/": [],
 	"/saudades": [],
-	"/saudades/autobattler": [],
-	"/saudades/tarot": [],
+	"/saudades/games/[slug]": [
+		"src/routes/saudades/games/[slug]/+page.ts"
+	],
 	"/work": []
 }
