@@ -1,7 +1,6 @@
 <script lang="ts">
     let { data } = $props();
-    
-    const game = data.game;
+    const game = $derived(data.game);
 </script>
 
 <div class="h-full w-full text-sky-200 flex flex-col items-center">

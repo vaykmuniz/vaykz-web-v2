@@ -1,18 +1,5 @@
-export interface Game {
-    slug: string
-    src: string
-    class: string
-}
+import despertar from "./despertar/despertar"
+import type { Game } from "./game.type"
+import tarot from "./tarot/tarot"
 
-export const games: Game[] = [
-    {
-        slug: 'tarot',
-        src: '/tarot/web.html',
-        class: 'h-[600px] w-[1100px] border-none'
-    },
-    {
-        slug: 'autobattler',
-        src: '/autobattler/autobattler.html',
-        class: "w-dvw h-full border-none"
-    }
-]
+export const games: Game[] = [tarot, despertar]
