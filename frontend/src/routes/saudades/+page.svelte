@@ -1,5 +1,6 @@
 <script lang="ts">
-	import DisplayCard from "$lib/components/display-card/+display-card.svelte";
+	import Card from "$lib/components/card/+card.svelte"
+	import Pill from "$lib/components/pill/+pill.svelte"
 	import { games } from "$lib/games/games.const";
 </script>
 
@@ -10,11 +11,22 @@
 	<div class="mt-4 w-full h-88 flex flex-row gap-4">
 		{#each games as g}
 			<a href={`/saudades/games/${g.slug}`} >
-				<DisplayCard
-				img={g.thumbnail}
-				title={g.title}
-				label={g.labels[0]}
-				/>
+				<Card
+					class="transition-all duration-300 hover:-translate-y-1 hover:border-sky-200/70"
+				>
+					<img src={g.thumbnail} alt={g.title} class="h-52 w-full object-cover" loading="lazy" />
+
+					<div class="flex flex-1 flex-col gap-3 p-4">
+						<h3 class="text-lg font-semibold leading-tight">{g.title}</h3>
+						<div class="mt-auto">
+							{#each g.labels as label}
+								<Pill>
+									{label}
+								</Pill>
+							{/each}
+						</div>
+					</div>
+				</Card>
 			</a>
 		{/each}
 	</div>

@@ -9,7 +9,8 @@
 	<div class="flex items-baseline gap-8 text-sm md:text-lg">
 		<img alt="my-cat-koji-icon" src={koji}  class="h-14"/>
 		<a href="/" class={underline}> .home </a>
-		<a href="/work" class={underline}> /work </a>
+		<a href="/software" class={underline}> /software </a>
+		<a href="/automation" class={underline}> /automation </a>
 		<a href="/saudades" class={underline}> /saudades </a>
 	</div>
 

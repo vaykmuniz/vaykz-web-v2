@@ -1,8 +1,9 @@
 {
 	"/": [],
+	"/automation": [],
 	"/saudades": [],
 	"/saudades/games/[slug]": [
 		"src/routes/saudades/games/[slug]/+page.ts"
 	],
-	"/work": []
+	"/software": []
 }
