@@ -5,6 +5,8 @@
   
   import { onMount } from "svelte";
 
+  import Carousel from "$lib/components/carousel/+carousel.svelte";
+  let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple']
   interface Repo {
     name: string;
     description: string;
@@ -77,5 +79,16 @@
         </Card>
         {/each}
       </ul>
+      <Carousel autoplay={2000}>
+        {#each colors as color, index (index)}
+          <div style="height: 10px; width: 10px; background-color: {color}" />
+        {/each}
+          {#snippet leftControl()}
+            <span >Right</span>
+          {/snippet}
+          {#snippet rightControl()}
+            <span >Left</span>
+          {/snippet}
+      </Carousel>
   </section>
 </div>
