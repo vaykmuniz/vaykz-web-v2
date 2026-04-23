@@ -4,7 +4,7 @@
 	import Email from './email.svelte'
 </script>
 
-<footer class="flex w-full px-4 md:px-10 py-2 items-center gap-2 justify-between top-0 z-10 text-sky-200 text-lg">
+<footer class="fixed bottom-0 z-10 flex w-full px-4 md:px-10 py-2 items-center gap-2 justify-between text-sky-200 text-lg">
   <div class="flex gap-2">
 		<a
 			aria-label="github"
