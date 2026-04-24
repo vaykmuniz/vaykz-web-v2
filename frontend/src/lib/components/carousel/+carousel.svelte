@@ -194,6 +194,18 @@
 		align-items: center;
 	}
 
+	.slides {
+		display: flex;
+		gap: 1rem;
+		overflow-x: auto;
+		scroll-snap-type: x mandatory;
+	}
+
+	:global(.slides > *) {
+		flex: 0 0 auto;
+		scroll-snap-align: start;
+	}
+
 	.left,
 	.right {
 		position: absolute;
