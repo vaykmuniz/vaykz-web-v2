@@ -1,13 +1,26 @@
 <script>
   import { locale, locales } from "$lib/i18n/translations";
+  import Drawer from "$lib/components/drawer/+drawer.svelte";
   import koji from '$lib/assets/favicon.png'
 
-  const underline = "opacity-50 hover:opacity-100 relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[1px] after:w-0 after:bg-current after:transition-all hover:after:w-full pb-1";
+  const underline = "opacity-50 hover:opacity-100 relative hidden md:inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[1px] after:w-0 after:bg-current after:transition-all hover:after:w-full pb-1";
+  const drawerLink = "text-2xl opacity-50 hover:opacity-100 transition-opacity";
+  let openDrawer = false;
 </script>
 
 <nav class="flex w-full px-4 md:px-10 py-2 items-baseline gap-2 justify-between sticky top-0 z-10 text-sky-200 text-lg">
-	<div class="flex items-baseline gap-8 text-sm md:text-lg">
-		<img alt="my-cat-koji-icon" src={koji}  class="h-14"/>
+	<div class="flex items-baseline gap-8">
+		<button
+			type="button"
+			class="md:hidden transition-all hover:rounded-full hover:bg-sky-200/20"
+			aria-label="Open navigation drawer"
+			onclick={() => (openDrawer = true)}
+		>
+			<img alt="my-cat-koji-icon" src={koji} class="h-14" />
+		</button>
+
+		<img alt="my-cat-koji-icon" src={koji} class="h-14 hidden md:block" />
+
 		<a href="/" class={underline}> .home </a>
 		<a href="/software" class={underline}> /software </a>
 		<a href="/automation" class={underline}> /automation </a>
@@ -23,3 +36,11 @@
 	</div>
 </nav>
 
+<Drawer open={openDrawer} handleClose={() => (openDrawer = false)}>
+	<div class="flex h-full w-full flex-col items-start justify-start gap-4 px-8 py-16 text-sky-200">
+		<a href="/" class={drawerLink} onclick={() => (openDrawer = false)}> .home </a>
+		<a href="/software" class={drawerLink} onclick={() => (openDrawer = false)}> /software </a>
+		<a href="/automation" class={drawerLink} onclick={() => (openDrawer = false)}> /automation </a>
+		<a href="/saudades" class={drawerLink} onclick={() => (openDrawer = false)}> /saudades </a>
+	</div>
+</Drawer>

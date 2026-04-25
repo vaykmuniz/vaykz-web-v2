@@ -4,7 +4,7 @@
 	import Email from './email.svelte'
 </script>
 
-<footer class="fixed bottom-0 z-10 flex w-full px-4 md:px-10 py-2 items-center gap-2 justify-between text-sky-200 text-lg">
+<footer class="fixed bottom-0 z-10 flex w-full px-4 md:px-10 py-2 items-center gap-2 justify-between text-sky-200 text-lg bg-black">
   <div class="flex gap-2">
 		<a
 			aria-label="github"
@@ -35,19 +35,3 @@
 
 	</div>
 </footer>
-
-
-<style>
-@keyframes glitch {
-  50% {
-	transform: skew(0deg)
-  }
-  90% {
-    transform: skew(180deg);
-  }
-}
-
-.glitch {
-  animation: glitch 5000ms var(--ease-elastic-in-1, ease-in-out) infinite;
-}
-</style>
