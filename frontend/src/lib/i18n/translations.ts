@@ -1,7 +1,7 @@
 import { derived, writable } from "svelte/store";
 import translations from "./translations.const";
 
-export const locale = writable("br");
+export const locale = writable("en");
 export const locales = Object.keys(translations);
 
 type Translations = typeof translations;
@@ -17,7 +17,9 @@ function translate<L extends Locale>(
   if (!key) throw new Error("no key provided to $t()");
   if (!locale) throw new Error(`no translation for key "${String(key)}"`);
 
-  let text: string = translations[locale][key] as string;
+  const textFromLocale = translations[locale][key] as string | undefined;
+  const fallbackText = translations.en[key as keyof Translations["en"]];
+  let text = textFromLocale ?? fallbackText;
 
   if (!text) throw new Error(`no translation found for ${locale}.${String(key)}`);
 

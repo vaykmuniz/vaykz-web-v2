@@ -1,5 +1,6 @@
 <script lang="ts">
     import GameModal from '$lib/components/game-modal/+game-modal.svelte';
+    import { t } from '$lib/i18n/translations';
     import { marked } from 'marked';
     import sanitizeHtml from 'sanitize-html';
 
@@ -25,9 +26,8 @@
             type="button"
             class="mt-2 w-fit border border-sky-200/50 px-4 py-2 text-sm uppercase tracking-widest transition-colors hover:bg-sky-200/10"
             onclick={() => (showGameplay = true)}
-            disabled={showGameplay}
         >
-            {showGameplay ? 'Playing' : 'Play game'}
+            {$t("game.play")}
         </button>
     </section>
 

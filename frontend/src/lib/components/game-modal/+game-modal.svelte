@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { t } from '$lib/i18n/translations';
     import type { GameOrientation } from '$lib/games/game.type';
 
     type LockOrientation = Exclude<GameOrientation, 'any'>;
@@ -133,16 +134,16 @@
         class="fixed inset-0 z-[200] flex items-center justify-center bg-black"
         role="dialog"
         aria-modal="true"
-        aria-label={`${title} gameplay`}
+        aria-label={$t("a11y.gameplay_dialog", { title })}
         bind:this={modal}
     >
         <button
             type="button"
             class="absolute top-4 right-4 z-10 border border-sky-200/50 bg-black/70 px-3 py-2 text-xs uppercase tracking-widest text-sky-100 transition-colors hover:bg-sky-200/10"
             onclick={requestClose}
-            aria-label="Close game modal"
+            aria-label={$t("a11y.close_game_modal")}
         >
-            Close
+            {$t("common.close")}
         </button>
 
         <div class="overflow-hidden" style={frameStyle}>

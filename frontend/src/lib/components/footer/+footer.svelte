@@ -1,7 +1,10 @@
 <script>
+	import { t } from "$lib/i18n/translations";
     import Github from '../footer/github.svelte'
     import Linkedin from './linkedin.svelte'
 	import Email from './email.svelte'
+
+	$: emailHref = `mailto:gabrielrasmuniz@gmail.com?subject=${encodeURIComponent($t("contact.work_subject"))}`;
 </script>
 
 <footer class="fixed bottom-0 z-10 flex w-full px-4 md:px-10 py-2 items-center gap-2 justify-between text-sky-200 text-lg bg-black">
@@ -25,8 +28,8 @@
 		</a>
 
 		<a
-			aria-label="my-email"
-			href="mailto:gabrielrasmuniz@gmail.com?subject=Work"
+			aria-label={$t("a11y.my_email")}
+			href={emailHref}
 			target="_blank"
 			class="opacity-50 transition-all duration-500 hover:opacity-100"
 		>

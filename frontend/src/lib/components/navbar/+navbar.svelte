@@ -1,5 +1,5 @@
 <script>
-  import { locale, locales } from "$lib/i18n/translations";
+  import { locale, locales, t } from "$lib/i18n/translations";
   import Drawer from "$lib/components/drawer/+drawer.svelte";
   import koji from '$lib/assets/favicon.png'
 
@@ -13,13 +13,13 @@
 		<button
 			type="button"
 			class="md:hidden transition-all hover:rounded-full hover:bg-sky-200/20"
-			aria-label="Open navigation drawer"
+			aria-label={$t("a11y.open_navigation_drawer")}
 			onclick={() => (openDrawer = true)}
 		>
-			<img alt="my-cat-koji-icon" src={koji} class="h-14" />
+			<img alt={$t("a11y.koji_icon_alt")} src={koji} class="h-14" />
 		</button>
 
-		<img alt="my-cat-koji-icon" src={koji} class="h-14 hidden md:block" />
+		<img alt={$t("a11y.koji_icon_alt")} src={koji} class="h-14 hidden md:block" />
 
 		<a href="/" class={underline}> .home </a>
 		<a href="/software" class={underline}> /software </a>

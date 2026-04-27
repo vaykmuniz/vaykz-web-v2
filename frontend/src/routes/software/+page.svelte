@@ -44,26 +44,26 @@
           <h4 class="text-xl uppercase font-thin tracking-widest font-oswald">
             {$t("work.experience.position_company", {
               position: $t(experience.positionKey),
-              company: $t(experience.companyKey)
+              company: experience.company
             })}
           </h4>
           <p class="opacity-50 font-sans">{$t(experience.periodKey)}</p>
         </div>
-        <p class="font-sans text-sm">{$t(experience.descriptionKey)}</p>
+        <p class="font-sans text-sm">{experience.description}</p>
       </div>
     {/each}
   </section>
 
   <section class="w-full px-5 flex flex-col justify-start items-start gap-2">
       <h2 class="text-2xl opacity-50 uppercase font-thin tracking-widest font-oswald">
-      Skills
+      {$t("work.software.skills_title")}
       </h2>
       <hr class="w-full md:w-1/4 h-px opacity-50" />
   </section>
 
   <section class="w-full px-5 flex flex-col justify-start items-start gap-2">
     <h2 class="text-2xl opacity-50 uppercase font-thin tracking-widest font-oswald">
-      Projects
+      {$t("work.software.projects_title")}
     </h2>
     <hr class="w-full md:w-1/4 h-px opacity-50 mb-4" />
     {#if repos.length}

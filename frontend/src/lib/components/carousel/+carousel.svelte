@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { t } from "$lib/i18n/translations";
 	import Siema from 'siema';
 	import { createEventDispatcher, onMount, type Snippet } from 'svelte';
 
@@ -162,10 +163,10 @@
 		{@render children?.()}
 	</div>
 	{#if controls}
-		<button class="left" onclick={left} use:resetInterval={autoplay} aria-label="Previous slide" type="button">
+		<button class="left" onclick={left} use:resetInterval={autoplay} aria-label={$t("a11y.previous_slide")} type="button">
 			{@render leftControl?.()}
 		</button>
-		<button class="right" onclick={right} use:resetInterval={autoplay} aria-label="Next slide" type="button">
+		<button class="right" onclick={right} use:resetInterval={autoplay} aria-label={$t("a11y.next_slide")} type="button">
 			{@render rightControl?.()}
 		</button>
 	{/if}
@@ -178,7 +179,7 @@
 						class="dot"
 						class:active={isDotActive(currentIndex, i)}
 						onclick={() => go(i * currentPerPage)}
-						aria-label={`Go to slide ${i + 1}`}
+						aria-label={$t("a11y.go_to_slide", { index: String(i + 1) })}
 					></button>
 				</li>
 			{/each}

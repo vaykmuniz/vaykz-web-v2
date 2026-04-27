@@ -1,38 +1,38 @@
 export interface Experience {
   slug: string;
-  companyKey: string;
+  company: string;
   positionKey: string;
   periodKey: string;
-  descriptionKey: string;
+  description: string;
 }
 
 export const EXPERIENCES: Experience[] = [
   {
     slug: "medprev-online",
-    companyKey: "work.experience.medprev-online.company",
+    company: "Medprev Online",
     positionKey: "work.experience.medprev-online.position",
     periodKey: "work.experience.medprev-online.period",
-    descriptionKey: "work.experience.medprev-online.description"
+    description: "oi"
   },
   {
     slug: "bornlogic",
-    companyKey: "work.experience.bornlogic.company",
+    company: "Bornlogic",
     positionKey: "work.experience.bornlogic.position",
     periodKey: "work.experience.bornlogic.period",
-    descriptionKey: "work.experience.bornlogic.description"
+    description: "oi"
   },
   {
     slug: "cargon",
-    companyKey: "work.experience.cargon.company",
+    company: "CargOn",
     positionKey: "work.experience.cargon.position",
     periodKey: "work.experience.cargon.period",
-    descriptionKey: "work.experience.cargon.description"
+    description: "oi"
   },
   {
     slug: "icolabora",
-    companyKey: "work.experience.icolabora.company",
+    company: "iColabora",
     positionKey: "work.experience.icolabora.position",
     periodKey: "work.experience.icolabora.period",
-    descriptionKey: "work.experience.icolabora.description"
+    description: "oi"
   }
 ];

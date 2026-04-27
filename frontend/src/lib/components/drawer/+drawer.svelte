@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { t } from "$lib/i18n/translations";
+
 	let { open = false, handleClose, children } = $props<{
 		open?: boolean;
 		handleClose?: () => void;
@@ -13,7 +15,7 @@
 		class="absolute top-4 right-4 mt-3 flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-transparent text-inherit transition-colors duration-200 hover:bg-gray-700"
 		type="button"
 		onclick={handleClose}
-		aria-label="Close drawer"
+		aria-label={$t("a11y.close_drawer")}
 	>
 		X
 	</button>
