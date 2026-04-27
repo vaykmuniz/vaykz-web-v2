@@ -14,7 +14,7 @@ const translations: Translations = {
     "home.engineer.internship.title": "Scientific Research Internship",
     "home.engineer.internship.description": "Development of a high voltage power-supply operating in DCM for PFC (Power Factor Correction).",
     "home.about_me_title": "About me",
-    "home.about_me_description": "Hungry for challenges and with an insatiable desire for knowledge, i'm always bringing new ideas to my peers so we can promote and environment of constant evolution and share.",
+    "home.about_me_description": "Hungry for challenges and driven by an insatiable desire for knowledge, I constantly bring new ideas to my peers so we can foster an environment of continuous evolution and shared growth.",
 
     "work.software.title": "Software Development",
     "work.software.description": "Experience developing web applications and software solutions.",
@@ -62,8 +62,8 @@ const translations: Translations = {
     "home.engineer.bachelors.title": "Licenciatura en Ingeniería de Control y Automatización",
     "home.engineer.internship.title": "Pasantía de Investigación Científica",
     "home.engineer.internship.description": "Desarrollo de una fuente de alimentación de alto voltaje que opera en DCM para PFC (Corrección del Factor de Potencia).",
-    "home.about_me_title": "About me",
-    "home.about_me_description": "Description",
+    "home.about_me_title": "Sobre mí",
+    "home.about_me_description": "Hambriento de desafíos y movido por un deseo insaciable de conocimiento, aporto constantemente nuevas ideas a mis compañeros para que podamos fomentar un entorno de evolución continua y crecimiento compartido.",
 
     "work.software.title": "Desarrollo de Software",
     "work.software.description": "Experiencia desarrollando aplicaciones web y soluciones de software.",
@@ -112,7 +112,7 @@ const translations: Translations = {
     "home.engineer.internship.title": "Estágio em Pesquisa Científica",
     "home.engineer.internship.description": "Desenvolvimento de uma fonte de alimentação de alta tensão operando em DCM para PFC (Correção do Fator de Potência).",
     "home.about_me_title": "Sobre mim",
-    "home.about_me_description": "Description",
+    "home.about_me_description": "Faminto por desafios e movido por um desejo insaciável de conhecimento, trago constantemente novas ideias para meus colegas para que possamos promover um ambiente de evolução contínua e crescimento compartilhado.",
 
     "work.software.title": "Desenvolvimento de Software",
     "work.software.description": "Experiência desenvolvendo aplicações web e soluções de software.",

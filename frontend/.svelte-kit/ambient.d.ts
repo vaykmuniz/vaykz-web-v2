@@ -62,7 +62,6 @@ declare module '$env/static/private' {
 	export const WSL_INTEROP: string;
 	export const _: string;
 	export const _P9K_SSH_TTY: string;
-	export const npm_config_prefix: string;
 	export const npm_config_registry: string;
 	export const TERM: string;
 	export const PMSPEC: string;
@@ -89,7 +88,6 @@ declare module '$env/static/private' {
 	export const P9K_SSH: string;
 	export const GIT_PAGER: string;
 	export const __MISE_ZSH_PRECMD_RUN: string;
-	export const npm_config_dir: string;
 	export const LC_ALL: string;
 	export const PWD: string;
 	export const npm_execpath: string;
@@ -170,7 +168,6 @@ declare module '$env/dynamic/private' {
 		WSL_INTEROP: string;
 		_: string;
 		_P9K_SSH_TTY: string;
-		npm_config_prefix: string;
 		npm_config_registry: string;
 		TERM: string;
 		PMSPEC: string;
@@ -197,7 +194,6 @@ declare module '$env/dynamic/private' {
 		P9K_SSH: string;
 		GIT_PAGER: string;
 		__MISE_ZSH_PRECMD_RUN: string;
-		npm_config_dir: string;
 		LC_ALL: string;
 		PWD: string;
 		npm_execpath: string;
