@@ -25,6 +25,7 @@
 		"@tailwindcss/typography": "^0.5.19",
 		"@tailwindcss/vite": "^4.1.16",
 		"@types/node": "^20.19.24",
+		"@types/sanitize-html": "^2.16.1",
 		"eslint": "^9.38.0",
 		"eslint-config-prettier": "^10.1.8",
 		"eslint-plugin-import": "^2.32.0",
@@ -49,6 +50,8 @@
 	},
 	"dependencies": {
 		"i18n": "^0.15.3",
+		"marked": "^18.0.2",
+		"sanitize-html": "^2.17.3",
 		"siema": "^1.5.1",
 		"vite-plugin-svelte-svg": "^2.3.0"
 	}

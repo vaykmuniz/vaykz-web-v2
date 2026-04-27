@@ -2,6 +2,7 @@
 	import { t } from '$lib/i18n/translations';
 
 	$: TITLES = [$t("home.titles_1"), $t("home.titles_2"), $t("home.titles_3")];
+
 </script>
 
 <section class="h-full w-full px-2 md:px-12 flex flex-col items-start justify-start">
