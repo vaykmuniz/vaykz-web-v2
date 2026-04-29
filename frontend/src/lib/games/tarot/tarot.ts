@@ -3,7 +3,7 @@ import thumbnail from './tarot.png'
 
 const tarot: Game = {
     slug: 'tarot',
-    src: '/tarot/web.html',
+    src: '/tarot/tarot.html',
     class: 'h-[600px] w-[1100px] border-none',
     orientation: 'landscape',
     thumbnail,
