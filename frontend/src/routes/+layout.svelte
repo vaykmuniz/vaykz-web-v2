@@ -11,9 +11,9 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-<div class="min-h-screen w-full overflow-hidden flex flex-col items-center justify-start bg-black font-oswald">
+<div class="flex min-h-screen w-full flex-col items-center justify-start bg-black font-oswald">
 	<Navbar />
-	<div class="overflow-y-auto w-full h-full text-sky-200">
+	<div class="w-full flex-1 text-sky-200">
 		{@render children?.()}
 	</div>
 	<Footer />

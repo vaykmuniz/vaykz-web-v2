@@ -8,7 +8,7 @@
   let openDrawer = false;
 </script>
 
-<nav class="flex w-full px-4 md:px-10 py-2 items-baseline gap-2 justify-between sticky top-0 z-10 text-sky-200 text-lg">
+<nav class="flex w-full px-4 md:px-10 py-2 items-baseline gap-2 justify-between sticky top-0 z-10 text-sky-200 text-lg  bg-black">
 	<div class="flex items-baseline gap-8">
 		<button
 			type="button"
