@@ -7,7 +7,8 @@ export const nodes = [
 	() => import('./nodes/3'),
 	() => import('./nodes/4'),
 	() => import('./nodes/5'),
-	() => import('./nodes/6')
+	() => import('./nodes/6'),
+	() => import('./nodes/7')
 ];
 
 export const server_loads = [];
@@ -17,7 +18,8 @@ export const dictionary = {
 		"/automation": [3],
 		"/saudades": [4],
 		"/saudades/games/[slug]": [5],
-		"/software": [6]
+		"/skills": [6],
+		"/software": [7]
 	};
 
 export const hooks = {

@@ -27,7 +27,7 @@ export {};
 
 declare module "$app/types" {
 	export interface AppTypes {
-		RouteId(): "/" | "/automation" | "/saudades" | "/saudades/games" | "/saudades/games/[slug]" | "/software";
+		RouteId(): "/" | "/automation" | "/saudades" | "/saudades/games" | "/saudades/games/[slug]" | "/skills" | "/software";
 		RouteParams(): {
 			"/saudades/games/[slug]": { slug: string }
 		};
@@ -37,9 +37,10 @@ declare module "$app/types" {
 			"/saudades": { slug?: string };
 			"/saudades/games": { slug?: string };
 			"/saudades/games/[slug]": { slug: string };
+			"/skills": Record<string, never>;
 			"/software": Record<string, never>
 		};
-		Pathname(): "/" | "/automation" | "/automation/" | "/saudades" | "/saudades/" | "/saudades/games" | "/saudades/games/" | `/saudades/games/${string}` & {} | `/saudades/games/${string}/` & {} | "/software" | "/software/";
+		Pathname(): "/" | "/automation" | "/automation/" | "/saudades" | "/saudades/" | "/saudades/games" | "/saudades/games/" | `/saudades/games/${string}` & {} | `/saudades/games/${string}/` & {} | "/skills" | "/skills/" | "/software" | "/software/";
 		ResolvedPathname(): `${"" | `/${string}`}${ReturnType<AppTypes['Pathname']>}`;
 		Asset(): "/autobattler/autobattler.apple-touch-icon.png" | "/autobattler/autobattler.audio.position.worklet.js" | "/autobattler/autobattler.audio.worklet.js" | "/autobattler/autobattler.html" | "/autobattler/autobattler.icon.png" | "/autobattler/autobattler.js" | "/autobattler/autobattler.pck" | "/autobattler/autobattler.png" | "/autobattler/autobattler.wasm" | "/neo-despertar/neo-despertar.apple-touch-icon.png" | "/neo-despertar/neo-despertar.audio.position.worklet.js" | "/neo-despertar/neo-despertar.audio.worklet.js" | "/neo-despertar/neo-despertar.html" | "/neo-despertar/neo-despertar.icon.png" | "/neo-despertar/neo-despertar.js" | "/neo-despertar/neo-despertar.pck" | "/neo-despertar/neo-despertar.png" | "/neo-despertar/neo-despertar.wasm" | "/robots.txt" | "/tarot/tarot.apple-touch-icon.png" | "/tarot/tarot.audio.position.worklet.js" | "/tarot/tarot.audio.worklet.js" | "/tarot/tarot.html" | "/tarot/tarot.icon.png" | "/tarot/tarot.js" | "/tarot/tarot.pck" | "/tarot/tarot.png" | "/tarot/tarot.wasm" | string & {};
 	}
