@@ -39,7 +39,7 @@
     <p class="font-sans">{$t("work.software.description")}</p>
 
     {#each EXPERIENCES as experience}
-      <div class="flex w-full flex-col text-start border-l px-5">
+      <div class="flex w-full flex-col text-start border-l px-5 mb-4">
         <div class="flex flex-col py-2">
           <h4 class="text-xl uppercase font-thin tracking-widest font-oswald">
             {$t("work.experience.position_company", {
@@ -49,17 +49,21 @@
           </h4>
           <p class="opacity-50 font-sans">{$t(experience.periodKey)}</p>
         </div>
-        <p class="font-sans text-sm">{experience.description}</p>
+        <ul class="font-sans text-sm list-disc pl-5">
+          {#each experience.descriptionKeys as descriptionKey}
+            <li>{$t(descriptionKey)}</li>
+          {/each}
+        </ul>
       </div>
     {/each}
   </section>
 
-  <section class="w-full px-5 flex flex-col justify-start items-start gap-2">
+  <!--section class="w-full px-5 flex flex-col justify-start items-start gap-2">
       <h2 class="text-2xl opacity-50 uppercase font-thin tracking-widest font-oswald">
       {$t("work.software.skills_title")}
       </h2>
       <hr class="w-full md:w-1/4 h-px opacity-50" />
-  </section>
+  </section-->
 
   <section class="w-full px-5 flex flex-col justify-start items-start gap-2">
     <h2 class="text-2xl opacity-50 uppercase font-thin tracking-widest font-oswald">
