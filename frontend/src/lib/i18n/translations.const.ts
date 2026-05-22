@@ -68,6 +68,7 @@ const translations: Translations = {
     "a11y.gameplay_dialog": "{{title}} gameplay",
     "a11y.koji_icon_alt": "my-cat-koji-icon",
     "a11y.my_email": "my-email",
+    "a11y.download_curriculum": "Download my curriculum",
     "a11y.previous_slide": "Previous slide",
     "a11y.next_slide": "Next slide",
     "a11y.go_to_slide": "Go to slide {{index}}"
@@ -139,6 +140,7 @@ const translations: Translations = {
     "a11y.gameplay_dialog": "juego de {{title}}",
     "a11y.koji_icon_alt": "icono-mi-gato-koji",
     "a11y.my_email": "mi-correo",
+    "a11y.download_curriculum": "Descargar mi currículum",
     "a11y.previous_slide": "Diapositiva anterior",
     "a11y.next_slide": "Siguiente diapositiva",
     "a11y.go_to_slide": "Ir a la diapositiva {{index}}"
@@ -210,6 +212,7 @@ const translations: Translations = {
     "a11y.gameplay_dialog": "jogo de {{title}}",
     "a11y.koji_icon_alt": "icone-do-meu-gato-koji",
     "a11y.my_email": "meu-email",
+    "a11y.download_curriculum": "Baixar meu currículo",
     "a11y.previous_slide": "Slide anterior",
     "a11y.next_slide": "Próximo slide",
     "a11y.go_to_slide": "Ir para o slide {{index}}"

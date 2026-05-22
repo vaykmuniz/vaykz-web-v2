@@ -10,7 +10,8 @@
 
 </script>
 
-<section class="h-full w-full px-2 md:px-12 flex flex-col items-start justify-start">
+
+<section class="h-full w-full px-9 md:px-12 flex flex-col items-start justify-start">
 
 	<div class="my-4 w-full flex flex-col items-start">
 		<h1

@@ -2,6 +2,7 @@
   import { locale, locales, t } from "$lib/i18n/translations";
   import Drawer from "$lib/components/drawer/+drawer.svelte";
   import koji from '$lib/assets/favicon.png'
+  import LinesMenu from './lines-menu.svelte'
 
   const underline = "opacity-50 hover:opacity-100 relative hidden md:inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[1px] after:w-0 after:bg-current after:transition-all hover:after:w-full pb-1";
   const drawerLink = "text-2xl opacity-50 hover:opacity-100 transition-opacity";
@@ -12,10 +13,11 @@
 	<div class="flex items-baseline gap-8">
 		<button
 			type="button"
-			class="md:hidden transition-all hover:rounded-full hover:bg-sky-200/20"
+			class="md:hidden transition-all hover:rounded-full hover:bg-sky-200/20 inline-flex text-sky-200 justify-baseline items-baseline pl-6 gap-2" 
 			aria-label={$t("a11y.open_navigation_drawer")}
 			onclick={() => (openDrawer = true)}
-		>
+		>	
+			<LinesMenu />
 			<img alt={$t("a11y.koji_icon_alt")} src={koji} class="h-14" />
 		</button>
 
