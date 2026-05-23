@@ -5,7 +5,7 @@ const despertar: Game = {
     slug: 'despertar',
     src: '/autobattler/autobattler.html',
     class: "w-dvw h-full border-none",
-    orientation: 'portrait',
+    orientation: 'landscape',
     thumbnail,
     labels: ['Soon'],
     title: 'Despertar',
