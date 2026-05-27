@@ -128,18 +128,22 @@
     </h2>
     <hr class="w-full md:w-1/4 h-px opacity-50 mb-4" />
     {#if repos.length}
-      <Carousel perPage={1}>
+      <Carousel>
         {#each repos as repo}
-          <Card class="w-4/6 md:w-max py-2 flex flex-col gap-2">
-            <a href={repo.html_url} target="_blank" rel="noopener noreferrer" class="font-oswarld uppercase px-5">
-              {repo.name.replaceAll("-", " ")}
-            </a>
-            <hr class="w-full h-px opacity-50" />
-            <div class="px-5">
-              <Pill>{repo.language}</Pill>
-              <p class="font-sans mt-2">{repo.description}</p>
+        <div class="block px-2">
+          <Card>
+            <div class="flex flex-col gap-2 py-2">
+              <a href={repo.html_url} target="_blank" rel="noopener noreferrer" class="font-oswarld uppercase px-5">
+                {repo.name.replaceAll("-", " ")}
+              </a>
+              <hr class="w-full h-px opacity-50" />
+              <div class="px-5">
+                <Pill>{repo.language}</Pill>
+                <p class="font-sans mt-2">{repo.description}</p>
+              </div>
             </div>
           </Card>
+        </div>
         {/each}
       </Carousel>
     {/if}
