@@ -10,9 +10,9 @@
 	<hr class="my-2 w-full md:w-1/4 h-px opacity-50"/>
 
 	<div class="w-full h-88 flex flex-row gap-4">
-	<Carousel>
+	<Carousel perPage={3} loop={false} draggable={true} dots={true}>
 		{#each games as g}
-		<a href={`/saudades/games/${g.slug}`} class="pt-4">
+		<a href={`/saudades/games/${g.slug}`} class="block h-full px-2 pt-4">
 			<Card
 					class="transition-all duration-300 hover:-translate-y-1 hover:border-sky-200/70"
 				>
