@@ -4,7 +4,7 @@ import thumbnail from '$lib/assets/favicon.png'
 const readme: Game = {
     slug: 'readme',
     src: '/readme/read.me.html',
-    class: "w-[640px] h-[360px] border-none",
+    class: "w-[640px] h-[360px] border-none hidden md:block",
     orientation: 'portrait',
     thumbnail,
     labels: ['Start here'],
