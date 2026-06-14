@@ -3,12 +3,12 @@
 	import { onMount } from 'svelte';
 	import { Tween } from 'svelte/motion';
 
-	$: TITLES = [$t("home.titles_1"), $t("home.titles_2"), $t("home.titles_3")];
-	$: ABOUT_ME_PARAGRAPHS = [
+	const TITLES = $derived([$t("home.titles_1"), $t("home.titles_2"), $t("home.titles_3")]);
+	const ABOUT_ME_PARAGRAPHS = $derived([
 		$t("home.about_me_description_1"),
 		$t("home.about_me_description_2"),
 		$t("home.about_me_description_3")
-	];
+	]);
 
 	const nameOpacity = new Tween(0, { duration: 700 });
 	const titlesOpacity = new Tween(0, { duration: 700 });
@@ -23,6 +23,8 @@
 		await aboutDescriptionOpacity.set(1);
 	});
 </script>
+
+<svelte:options runes={true} />
 
 
 <section class="h-full w-full px-9 md:px-12 flex flex-col items-start justify-start">

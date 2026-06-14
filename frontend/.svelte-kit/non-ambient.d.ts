@@ -27,18 +27,19 @@ export {};
 
 declare module "$app/types" {
 	export interface AppTypes {
-		RouteId(): "/" | "/automation" | "/saudades" | "/saudades/games" | "/saudades/games/[slug]" | "/skills" | "/software";
+		RouteId(): "/(site)" | "/" | "/(site)/automation" | "/saudades" | "/saudades/games" | "/saudades/games/[slug]" | "/(site)/skills" | "/(site)/software";
 		RouteParams(): {
 			"/saudades/games/[slug]": { slug: string }
 		};
 		LayoutParams(): {
+			"/(site)": Record<string, never>;
 			"/": { slug?: string };
-			"/automation": Record<string, never>;
+			"/(site)/automation": Record<string, never>;
 			"/saudades": { slug?: string };
 			"/saudades/games": { slug?: string };
 			"/saudades/games/[slug]": { slug: string };
-			"/skills": Record<string, never>;
-			"/software": Record<string, never>
+			"/(site)/skills": Record<string, never>;
+			"/(site)/software": Record<string, never>
 		};
 		Pathname(): "/" | "/automation" | "/automation/" | "/saudades" | "/saudades/" | "/saudades/games" | "/saudades/games/" | `/saudades/games/${string}` & {} | `/saudades/games/${string}/` & {} | "/skills" | "/skills/" | "/software" | "/software/";
 		ResolvedPathname(): `${"" | `/${string}`}${ReturnType<AppTypes['Pathname']>}`;

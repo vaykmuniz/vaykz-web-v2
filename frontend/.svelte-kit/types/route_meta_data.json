@@ -1,10 +1,11 @@
 {
+	"/(site)": [],
 	"/": [],
-	"/automation": [],
+	"/(site)/automation": [],
 	"/saudades": [],
 	"/saudades/games/[slug]": [
 		"src/routes/saudades/games/[slug]/+page.ts"
 	],
-	"/skills": [],
-	"/software": []
+	"/(site)/skills": [],
+	"/(site)/software": []
 }
