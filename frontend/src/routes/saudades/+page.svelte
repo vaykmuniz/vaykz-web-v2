@@ -7,7 +7,7 @@
 	import readme from "$lib/games/readme/readme";
 </script>
 
-<section class="saudades-page flex min-h-screen w-full flex-col gap-2 px-2 text-sky-200">
+<section class="flex min-h-screen w-full flex-col gap-2 px-2 text-sky-200">
 	<h1 class="mt-4 font-oswald text-5xl font-thin tracking-widest uppercase opacity-50 md:px-12 text-center border-b-sky-200/45 border-b pb-4">{$t("saudades.title")}</h1>
 	
 	<div class="flex w-full flex-col items-center gap-4 px-2 text-center">
@@ -17,11 +17,11 @@
 
 
 	<div class="flex h-88 w-full flex-row gap-4">
-		<Carousel perPage={1} autoplay={2000} loop={true} draggable={true} dots={true}>
+		<Carousel>
 			{#each games as g}
-			<a href={`/saudades/games/${g.slug}`} class="block h-full px-2 pt-4">
+			<a href={`/saudades/games/${g.slug}`} class="block h-full md:w-xl px-2 pt-4">
 				<Card
-					class="transition-all duration-300 hover:-translate-y-1 hover:border-sky-200/70"
+					class="transition-all duration-300 hover:-translate-y-1 hover:border-sky-200/70 ml-30"
 				>
 					<img src={g.thumbnail} alt={g.title} class="h-52 w-full object-cover" loading="lazy" />
 					
@@ -48,24 +48,3 @@
 
 </section>
 
-<style>
-	.saudades-page {
-		background-color: #111;
-		background-image:
-			linear-gradient(
-				45deg,
-				rgba(255, 255, 255, 0.03) 25%,
-				transparent 25%,
-				transparent 75%,
-				rgba(255, 255, 255, 0.03) 75%
-			),
-			linear-gradient(
-				-45deg,
-				rgba(255, 255, 255, 0.03) 25%,
-				transparent 25%,
-				transparent 75%,
-				rgba(255, 255, 255, 0.03) 75%
-			);
-		background-size: 60px 60px;
-	}
-</style>
