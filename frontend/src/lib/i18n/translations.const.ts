@@ -58,8 +58,8 @@ const translations: Translations = {
     "game.playing": "Playing",
     "game.not_found": "Game not found",
     "saudades.title": "Saudades Games",
-    "saudades.hero_title": "Where Brazil's memories meet your heart.",
-    "saudades.hero_subtitle": "Play in places you've never been.",
+    "saudades.hero_title": "Memories meet heart",
+    "saudades.hero_subtitle": "Play in places you've been",
 
     "error.page_title": "Error Page",
     "common.close": "Close",
@@ -133,8 +133,8 @@ const translations: Translations = {
     "game.playing": "Jugando",
     "game.not_found": "Juego no encontrado",
     "saudades.title": "Juegos Saudades",
-    "saudades.hero_title": "Donde los recuerdos de Brasil llegan a tu corazón.",
-    "saudades.hero_subtitle": "Juega en lugares donde nunca has estado.",
+    "saudades.hero_title": "Los recuerdos encuentran el corazón",
+    "saudades.hero_subtitle": "Juega en lugares donde has estado",
 
     "error.page_title": "Página de error",
     "common.close": "Cerrar",
@@ -208,8 +208,8 @@ const translations: Translations = {
     "game.playing": "Jogando",
     "game.not_found": "Jogo não encontrado",
     "saudades.title": "Jogos Saudades",
-    "saudades.hero_title": "Onde as memórias do Brasil encontram seu coração.",
-    "saudades.hero_subtitle": "Jogue em lugares onde você nunca esteve.",
+    "saudades.hero_title": "Memórias encontram o coração",
+    "saudades.hero_subtitle": "Jogue em lugares onde você já esteve",
 
     "error.page_title": "Página de erro",
     "common.close": "Fechar",
