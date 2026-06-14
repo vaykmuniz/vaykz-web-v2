@@ -42,12 +42,6 @@
 		"typescript-eslint": "^8.46.2",
 		"vite": "^7.1.12"
 	},
-	"pnpm": {
-		"onlyBuiltDependencies": [
-			"esbuild",
-			"@tailwindcss/oxide"
-		]
-	},
 	"dependencies": {
 		"i18n": "^0.15.3",
 		"marked": "^18.0.2",
