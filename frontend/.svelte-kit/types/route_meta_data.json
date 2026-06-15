@@ -2,6 +2,7 @@
 	"/(site)": [],
 	"/": [],
 	"/(site)/automation": [],
+	"/(site)/projects": [],
 	"/saudades": [],
 	"/saudades/games/[slug]": [
 		"src/routes/saudades/games/[slug]/+page.ts"

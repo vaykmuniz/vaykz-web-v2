@@ -27,6 +27,7 @@
 		<a href="/software" class={underline}> /software </a>
 		<a href="/automation" class={underline}> /automation </a>
 		<a href="/skills" class={underline}> /skills </a>
+		<a href="/projects" class={underline}> /projects </a>
 		<a href="/saudades" class={underline}> /saudades </a>
 	</div>
 
@@ -45,6 +46,7 @@
 		<a href="/software" class={drawerLink} onclick={() => (openDrawer = false)}> /software </a>
 		<a href="/automation" class={drawerLink} onclick={() => (openDrawer = false)}> /automation </a>
 		<a href="/skills" class={drawerLink} onclick={() => (openDrawer = false)}> /skills </a>
+		<a href="/projects" class={drawerLink} onclick={() => (openDrawer = false)}> /projects </a>
 		<a href="/saudades" class={drawerLink} onclick={() => (openDrawer = false)}> /saudades </a>
 	</div>
 </Drawer>
