@@ -12,13 +12,12 @@
 
 	const nameOpacity = new Tween(0, { duration: 700 });
 	const titlesOpacity = new Tween(0, { duration: 700 });
-	const titlesX = new Tween(-100, { duration: 700 });
 	const aboutTitleOpacity = new Tween(0, { duration: 700 });
 	const aboutDescriptionOpacity = new Tween(0, { duration: 700 });
 
 	onMount(async () => {
 		await nameOpacity.set(0.5);
-		await Promise.all([titlesOpacity.set(1), titlesX.set(0)]);
+		await titlesOpacity.set(1);
 		await aboutTitleOpacity.set(1);
 		await aboutDescriptionOpacity.set(1);
 	});
@@ -41,7 +40,6 @@
 		<div
 			class="flex flex-col font-sans tracking-widest"
 			style:opacity={titlesOpacity.current}
-			style:transform={`translateX(${titlesX.current}vw)`}
 		>
 			{#each TITLES as title}
 				<p>{title}</p>
