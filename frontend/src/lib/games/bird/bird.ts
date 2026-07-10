@@ -1,5 +1,5 @@
 import type { Game } from '../game.type'
-import thumbnail from '$lib/assets/favicon.png'
+import thumbnail from './icon-bird.png'
 
 const bird: Game = {
     slug: 'bird',
