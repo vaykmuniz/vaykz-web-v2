@@ -248,7 +248,7 @@
 
 	.dot {
 		border-radius: 100%;
-		background-color: rgba(255, 255, 255, 0.5);
+		background-color: color-mix(in srgb, var(--color-accent) 50%, transparent);
 		height: 8px;
 		width: 8px;
 		padding: 0;
@@ -257,10 +257,10 @@
 	}
 
 	.dot:hover {
-		background-color: rgba(255, 255, 255, 0.85);
+		background-color: color-mix(in srgb, var(--color-accent) 85%, transparent);
 	}
 
 	.dot.active {
-		background-color: rgba(255, 255, 255, 1);
+		background-color: var(--color-accent);
 	}
 </style>

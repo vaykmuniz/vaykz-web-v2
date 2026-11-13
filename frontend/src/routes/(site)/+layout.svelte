@@ -5,10 +5,10 @@
 	let { children } = $props();
 </script>
 
-<div class="flex min-h-screen w-full flex-col items-center justify-start bg-black font-oswald">
+<div class="flex min-h-screen w-full flex-col items-center justify-start bg-canvas font-oswald">
 	<Navbar />
-	<div class="w-full flex-1 text-sky-200">
+	<main class="site-container min-w-0 flex-1 text-accent">
 		{@render children?.()}
-	</div>
+	</main>
 	<Footer />
 </div>

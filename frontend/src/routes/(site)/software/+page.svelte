@@ -3,8 +3,8 @@
   import { EXPERIENCES } from "./experience.const";
 </script>
 
-<div class="flex flex-col items-start justify-center px-4 md:px-8 gap-8 py-4">
-  <section class="w-full px-5 flex flex-col justify-start items-start gap-2">
+<div class="flex flex-col items-start justify-center gap-8 py-4">
+  <section class="w-full flex flex-col justify-start items-start gap-2">
     <h3 class="text-2xl opacity-50 uppercase font-thin tracking-widest font-oswald">
       {$t("work.software.title")}
     </h3>

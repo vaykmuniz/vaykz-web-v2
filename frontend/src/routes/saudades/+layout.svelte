@@ -2,29 +2,29 @@
 	let { children } = $props();
 </script>
 
-<div class="flex min-h-screen w-full flex-col items-center justify-start bg-black font-oswald">
-	<div class="saudades-page w-full flex-1 text-sky-200">
+<div class="flex min-h-screen w-full flex-col items-center justify-start bg-canvas font-oswald">
+	<div class="saudades-page w-full flex-1 text-accent">
 		{@render children?.()}
 	</div>
 </div>
 
 <style>
 	.saudades-page {
-		background-color: #111;
+		background-color: var(--color-surface);
 		background-image:
 			linear-gradient(
 				45deg,
-				rgba(255, 255, 255, 0.03) 25%,
+				color-mix(in srgb, var(--color-accent) 3%, transparent) 25%,
 				transparent 25%,
 				transparent 75%,
-				rgba(255, 255, 255, 0.03) 75%
+				color-mix(in srgb, var(--color-accent) 3%, transparent) 75%
 			),
 			linear-gradient(
 				-45deg,
-				rgba(255, 255, 255, 0.03) 25%,
+				color-mix(in srgb, var(--color-accent) 3%, transparent) 25%,
 				transparent 25%,
 				transparent 75%,
-				rgba(255, 255, 255, 0.03) 75%
+				color-mix(in srgb, var(--color-accent) 3%, transparent) 75%
 			);
 		background-size: 60px 60px;
 	}

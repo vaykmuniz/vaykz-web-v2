@@ -33,8 +33,8 @@
   });
 </script>
 
-<div class="flex flex-col items-start justify-center px-4 md:px-8 gap-8 py-4">
-  <section class="w-full px-5 flex flex-col justify-start items-start gap-2">
+<div class="flex flex-col items-start justify-center gap-8 py-4">
+  <section class="w-full flex flex-col justify-start items-start gap-2">
     <h2 class="text-2xl opacity-50 uppercase font-thin tracking-widest font-oswald">
       {$t("work.software.projects_title")}
     </h2>
@@ -46,15 +46,15 @@
             <Card>
               <div class="flex animate-pulse flex-col gap-2 py-2">
                 <div class="px-5 py-1">
-                  <div class="h-5 w-2/3 rounded bg-sky-100/20"></div>
+                  <div class="h-5 w-2/3 rounded bg-accent/20"></div>
                 </div>
                 <hr class="w-full h-px opacity-50" />
                 <div class="px-5">
-                  <div class="h-6 w-20 rounded-full bg-sky-100/20"></div>
+                  <div class="h-6 w-20 rounded-full bg-accent/20"></div>
                   <div class="mt-3 space-y-2">
-                    <div class="h-4 w-full rounded bg-sky-100/15"></div>
-                    <div class="h-4 w-5/6 rounded bg-sky-100/15"></div>
-                    <div class="h-4 w-3/5 rounded bg-sky-100/15"></div>
+                    <div class="h-4 w-full rounded bg-accent/15"></div>
+                    <div class="h-4 w-5/6 rounded bg-accent/15"></div>
+                    <div class="h-4 w-3/5 rounded bg-accent/15"></div>
                   </div>
                 </div>
               </div>

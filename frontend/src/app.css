@@ -2,8 +2,73 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
 
+
+@theme {
+  --color-footer-muted: #8194A2;
+  --color-footer-link: #BFCCD5;
+  --font-inter: "Inter", sans-serif;
+  --color-navigation-muted: #95A3AF;
+  --color-navigation-line: #26303A;
+  --color-ice-blue-canvas: #090D11;
+  --color-ice-blue-surface: #111920;
+  --color-ice-blue-elevated: #111C25;
+  --color-ice-blue-content: #E8EDF1;
+  --color-ice-blue-muted: #A5B3BF;
+  --color-ice-blue-line: #29343E;
+  --color-ice-blue-accent: #B9E4FC;
+  --color-ice-blue-accent-hover: #C8E8FC;
+  --color-ice-blue-on-accent: #0A141C;
+  --color-dark-orange-canvas: #120D0A;
+  --color-dark-orange-surface: #1C1410;
+  --color-dark-orange-elevated: #271B14;
+  --color-dark-orange-content: #F3EBE5;
+  --color-dark-orange-muted: #BCA99B;
+  --color-dark-orange-line: #493326;
+  --color-dark-orange-accent: #E88A4A;
+  --color-dark-orange-accent-hover: #F3A56C;
+  --color-dark-orange-on-accent: #1C1008;
+}
+
+:root {
+  --palette-canvas: var(--color-ice-blue-canvas);
+  --palette-surface: var(--color-ice-blue-surface);
+  --palette-elevated: var(--color-ice-blue-elevated);
+  --palette-content: var(--color-ice-blue-content);
+  --palette-muted: var(--color-ice-blue-muted);
+  --palette-line: var(--color-ice-blue-line);
+  --palette-accent: var(--color-ice-blue-accent);
+  --palette-accent-hover: var(--color-ice-blue-accent-hover);
+  --palette-on-accent: var(--color-ice-blue-on-accent);
+  color-scheme: dark;
+}
+
+/* Reserved for future content sections; do not apply to site chrome. */
+.palette-dark-orange {
+  --palette-canvas: var(--color-dark-orange-canvas);
+  --palette-surface: var(--color-dark-orange-surface);
+  --palette-elevated: var(--color-dark-orange-elevated);
+  --palette-content: var(--color-dark-orange-content);
+  --palette-muted: var(--color-dark-orange-muted);
+  --palette-line: var(--color-dark-orange-line);
+  --palette-accent: var(--color-dark-orange-accent);
+  --palette-accent-hover: var(--color-dark-orange-accent-hover);
+  --palette-on-accent: var(--color-dark-orange-on-accent);
+}
+
+@theme inline {
+  --color-canvas: var(--palette-canvas);
+  --color-surface: var(--palette-surface);
+  --color-elevated: var(--palette-elevated);
+  --color-content: var(--palette-content);
+  --color-muted: var(--palette-muted);
+  --color-line: var(--palette-line);
+  --color-accent: var(--palette-accent);
+  --color-accent-hover: var(--palette-accent-hover);
+  --color-on-accent: var(--palette-on-accent);
+}
+
 body {
-    @apply font-sans;
+    @apply font-sans bg-canvas text-content;
     min-height: 100vh;
     width: 100%;
     margin: 0;
@@ -15,4 +80,16 @@ details > summary {
 }
 details > summary::-webkit-details-marker {
   display: none;
+}
+
+/* Shared horizontal alignment for site chrome and main pages. */
+@utility site-container {
+  width: 100%;
+  max-width: 1264px;
+  margin-inline: auto;
+  padding-inline: 16px;
+
+  @media (min-width: 640px) {
+    padding-inline: 24px;
+  }
 }

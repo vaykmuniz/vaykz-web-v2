@@ -1,52 +1,49 @@
-<script>
-  import { locale, locales, t } from "$lib/i18n/translations";
-  import Drawer from "$lib/components/drawer/+drawer.svelte";
-  import koji from '$lib/assets/favicon.png'
-  import LinesMenu from './lines-menu.svelte'
-
-  const underline = "opacity-50 hover:opacity-100 relative hidden md:inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[1px] after:w-0 after:bg-current after:transition-all hover:after:w-full pb-1";
-  const drawerLink = "text-2xl opacity-50 hover:opacity-100 transition-opacity";
-  let openDrawer = false;
+<script lang="ts">
+ import { page } from '$app/state';
+ import { afterNavigate } from '$app/navigation';
+ import { locale, locales, t } from '$lib/i18n/translations';
+ import Drawer from '$lib/components/drawer/+drawer.svelte';
+ import koji from '$lib/assets/favicon.png';
+ import LinesMenu from './lines-menu.svelte';
+ let openDrawer = $state(false);
+ const links = ['/', '/software', '/automation', '/skills', '/projects', '/saudades'];
+ const labels: Record<string, string> = { en: 'EN', es: 'ES', br: 'PT' };
+ const active = (href: string) => href === '/' ? page.url.pathname === '/' : page.url.pathname === href || page.url.pathname.startsWith(`${href}/`);
+ afterNavigate(() => { openDrawer = false; });
+ $effect(() => {
+  const query = window.matchMedia('(min-width: 1024px)');
+  const close = () => { if (query.matches) openDrawer = false; };
+  query.addEventListener('change', close);
+  return () => query.removeEventListener('change', close);
+ });
 </script>
 
-<nav class="flex w-full pb-8 px-4 md:px-10 items-baseline gap-2 justify-between sticky top-0 z-10 text-sky-200 text-lg  bg-black">
-	<div class="flex items-baseline gap-8">
-		<button
-			type="button"
-			class="md:hidden transition-all hover:rounded-full hover:bg-sky-200/20 inline-flex text-sky-200 justify-baseline items-baseline pl-6 gap-2" 
-			aria-label={$t("a11y.open_navigation_drawer")}
-			onclick={() => (openDrawer = true)}
-		>	
-			<LinesMenu />
-			<img alt={$t("a11y.koji_icon_alt")} src={koji} class="h-14" />
-		</button>
-
-		<img alt={$t("a11y.koji_icon_alt")} src={koji} class="h-14 hidden md:block" />
-
-		<a href="/" class={underline}> .home </a>
-		<a href="/software" class={underline}> /software </a>
-		<a href="/automation" class={underline}> /automation </a>
-		<a href="/skills" class={underline}> /skills </a>
-		<a href="/projects" class={underline}> /projects </a>
-		<a href="/saudades" class={underline}> /saudades </a>
-	</div>
-
-  <div class="flex gap-2">
-		<select bind:value={$locale} class="border-sky-200 font-sans">
-			{#each locales as l}
-			<option  class="bg-slate-800" value={l}>{l}</option>
-			{/each}
-		</select>
-	</div>
-</nav>
-
-<Drawer open={openDrawer} handleClose={() => (openDrawer = false)}>
-	<div class="flex h-full w-full flex-col items-start justify-start gap-4 px-8 py-16 text-sky-200">
-		<a href="/" class={drawerLink} onclick={() => (openDrawer = false)}> .home </a>
-		<a href="/software" class={drawerLink} onclick={() => (openDrawer = false)}> /software </a>
-		<a href="/automation" class={drawerLink} onclick={() => (openDrawer = false)}> /automation </a>
-		<a href="/skills" class={drawerLink} onclick={() => (openDrawer = false)}> /skills </a>
-		<a href="/projects" class={drawerLink} onclick={() => (openDrawer = false)}> /projects </a>
-		<a href="/saudades" class={drawerLink} onclick={() => (openDrawer = false)}> /saudades </a>
-	</div>
+<header class="sticky top-0 z-40 w-full border-b border-navigation-line bg-canvas font-inter">
+ <div class="site-container flex min-h-[72px] items-center justify-between gap-4 py-4 lg:min-h-[87px] lg:py-6">
+  <a href="/" class="flex shrink-0 items-center gap-3 text-[15px] font-semibold text-content focus-visible:outline-2 focus-visible:outline-accent">
+   <img src={koji} alt="" width="38" height="38" class="size-[38px] object-contain" />
+   <span>gabriel muniz</span>
+  </a>
+  <nav aria-label={$t('a11y.main_navigation')} class="hidden items-center gap-[26px] text-[13px] leading-[1.55] lg:flex">
+   {#each links as href}
+    <a {href} aria-current={active(href) ? 'page' : undefined} class="whitespace-nowrap transition-colors hover:text-accent focus-visible:outline-2 focus-visible:outline-accent {active(href) ? 'font-semibold text-accent' : 'text-navigation-muted'}">{href === '/' ? '.home' : href}</a>
+   {/each}
+  </nav>
+  <div class="flex shrink-0 items-center gap-4">
+   <div class="relative text-content">
+    <select aria-label={$t('a11y.language')} bind:value={$locale} class="appearance-none bg-transparent py-2 pr-4 text-xs font-medium focus-visible:outline-2 focus-visible:outline-accent">
+     {#each locales as language}<option class="bg-surface" value={language}>{labels[language]}</option>{/each}
+    </select>
+    <span aria-hidden="true" class="pointer-events-none absolute top-1/2 right-0 -translate-y-1/2 text-[13px] text-navigation-muted">⌄</span>
+   </div>
+   <button type="button" aria-label={$t('a11y.open_navigation_drawer')} aria-expanded={openDrawer} aria-controls="mobile-navigation" onclick={() => { openDrawer = true; }} class="flex size-11 items-center justify-center text-accent focus-visible:outline-2 focus-visible:outline-accent lg:hidden"><LinesMenu /></button>
+  </div>
+ </div>
+</header>
+<Drawer open={openDrawer} handleClose={() => { openDrawer = false; }}>
+ <nav id="mobile-navigation" aria-label={$t('a11y.main_navigation')} class="flex flex-col gap-6 px-6 py-20 font-inter text-2xl">
+  {#each links as href}
+   <a {href} aria-current={active(href) ? 'page' : undefined} onclick={() => { openDrawer = false; }} class="transition-colors hover:text-accent focus-visible:outline-2 focus-visible:outline-accent {active(href) ? 'font-semibold text-accent' : 'text-navigation-muted'}">{href === '/' ? '.home' : href}</a>
+  {/each}
+ </nav>
 </Drawer>

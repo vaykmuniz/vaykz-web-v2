@@ -2,6 +2,12 @@ import type { Translations } from "./translations.types";
 
 const translations: Translations = {
   en: {
+    "footer.resume": "Résumé",
+    "footer.email": "Email",
+    "footer.signature": "Software × Automation",
+    "footer.links": "Footer links",
+    "a11y.main_navigation": "Main navigation",
+    "a11y.language": "Language",
     "home.titles_1": "Engineer",
     "home.titles_2": "Automation",
     "home.titles_3": "Software",
@@ -77,6 +83,12 @@ const translations: Translations = {
     "a11y.go_to_slide": "Go to slide {{index}}"
   },
   es: {
+    "footer.resume": "Currículum",
+    "footer.email": "Correo",
+    "footer.signature": "Software × Automatización",
+    "footer.links": "Enlaces del pie de página",
+    "a11y.main_navigation": "Navegación principal",
+    "a11y.language": "Idioma",
     "home.titles_1": "Ingeniero",
     "home.titles_2": "Automatización",
     "home.titles_3": "Software",
@@ -152,6 +164,12 @@ const translations: Translations = {
     "a11y.go_to_slide": "Ir a la diapositiva {{index}}"
   },
   br: {
+    "footer.resume": "Currículo",
+    "footer.email": "E-mail",
+    "footer.signature": "Software × Automação",
+    "footer.links": "Links do rodapé",
+    "a11y.main_navigation": "Navegação principal",
+    "a11y.language": "Idioma",
     "home.titles_1": "Engenharia",
     "home.titles_2": "Controle e Automação",
     "home.titles_3": "Desenvolvimento de Software",

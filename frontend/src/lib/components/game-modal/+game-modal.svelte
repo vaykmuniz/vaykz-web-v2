@@ -131,7 +131,7 @@
 
 {#if open}
     <div
-        class="fixed inset-0 z-[200] flex items-center justify-center bg-black"
+        class="fixed inset-0 z-[200] flex items-center justify-center bg-canvas"
         role="dialog"
         aria-modal="true"
         aria-label={$t("a11y.gameplay_dialog", { title })}
@@ -139,7 +139,7 @@
     >
         <button
             type="button"
-            class="absolute top-4 right-4 z-10 border border-sky-200/50 bg-black/70 px-3 py-2 text-xs uppercase tracking-widest text-sky-100 transition-colors hover:bg-sky-200/10"
+            class="absolute top-4 right-4 z-10 border border-accent/50 bg-canvas/70 px-3 py-2 text-xs uppercase tracking-widest text-content transition-colors hover:bg-accent/10"
             onclick={requestClose}
             aria-label={$t("a11y.close_game_modal")}
         >
@@ -147,7 +147,7 @@
         </button>
 
         <div class="overflow-hidden" style={frameStyle}>
-            <iframe src={src} title={title} class="h-full w-full border-none bg-black"></iframe>
+            <iframe src={src} title={title} class="h-full w-full border-none bg-canvas"></iframe>
         </div>
     </div>
 {/if}

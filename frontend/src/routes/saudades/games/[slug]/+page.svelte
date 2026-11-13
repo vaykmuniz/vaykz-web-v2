@@ -24,7 +24,7 @@
 
         <button
             type="button"
-            class="mt-2 w-fit border border-sky-200/50 px-4 py-2 text-sm uppercase tracking-widest transition-colors hover:bg-sky-200/10"
+            class="mt-2 w-fit border border-accent/50 px-4 py-2 text-sm uppercase tracking-widest transition-colors hover:bg-accent/10"
             onclick={() => (showGameplay = true)}
         >
             {$t("game.play")}

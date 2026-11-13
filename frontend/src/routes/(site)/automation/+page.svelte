@@ -2,8 +2,8 @@
   import { t } from "$lib/i18n/translations";
 </script>
 
-<div class="flex flex-col items-start justify-center px-4 md:px-8 gap-8 py-4">
-  <section class="w-full px-5 flex flex-col gap-2">
+<div class="flex flex-col items-start justify-center gap-8 py-4">
+  <section class="w-full flex flex-col gap-2">
     <h3 class="text-2xl opacity-50 uppercase font-thin tracking-widest font-oswald">{$t("home.engineer.title")}</h3>
     <hr class="w-full md:w-1/4 h-px opacity-50" />
 
