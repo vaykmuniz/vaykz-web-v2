@@ -4,11 +4,25 @@ export interface Experience {
   positionKey: string;
   periodKey: string;
   descriptionKeys: string[];
+  stacks: string[];
 }
 
 export const EXPERIENCES: Experience[] = [
   {
+    slug: "ebanx-freelance",
+    company: "Ebanx (freelance)",
+    stacks: ["Next.js", "Vercel", "Storyblok"],
+    positionKey: "work.experience.ebanx-freelance.position",
+    periodKey: "work.experience.ebanx-freelance.period",
+    descriptionKeys: [
+      "work.experience.ebanx-freelance.description_1",
+      "work.experience.ebanx-freelance.description_2",
+      "work.experience.ebanx-freelance.description_3"
+    ]
+  },
+  {
     slug: "medprev-online",
+    stacks: ["GraphQL", "Playwright", "Go", "Python", "AWS"],
     company: "Medprev Online",
     positionKey: "work.experience.medprev-online.position",
     periodKey: "work.experience.medprev-online.period",
@@ -20,6 +34,7 @@ export const EXPERIENCES: Experience[] = [
   },
   {
     slug: "bornlogic",
+    stacks: ["React", "Single SPA", "Storybook"],
     company: "Bornlogic",
     positionKey: "work.experience.bornlogic.position",
     periodKey: "work.experience.bornlogic.period",
@@ -33,6 +48,7 @@ export const EXPERIENCES: Experience[] = [
   },
   {
     slug: "cargon",
+    stacks: ["MySQL", "Prisma", "Azure"],
     company: "CargOn",
     positionKey: "work.experience.cargon.position",
     periodKey: "work.experience.cargon.period",
@@ -46,6 +62,7 @@ export const EXPERIENCES: Experience[] = [
   },
   {
     slug: "icolabora",
+    stacks: ["Node.js", "REST APIs"],
     company: "iColabora",
     positionKey: "work.experience.icolabora.position",
     periodKey: "work.experience.icolabora.period",

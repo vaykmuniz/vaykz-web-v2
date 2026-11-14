@@ -7,7 +7,7 @@
  import LanguageSelect from './language-select.svelte';
  import LinesMenu from './lines-menu.svelte';
  let openDrawer = $state(false);
- const links = ['/', '/software', '/automation', '/skills', '/projects', '/saudades'];
+ const links = ['/', '/software', '/automation', '/projects', '/saudades'];
  const active = (href: string) => href === '/' ? page.url.pathname === '/' : page.url.pathname === href || page.url.pathname.startsWith(`${href}/`);
  afterNavigate(() => { openDrawer = false; });
  $effect(() => {
