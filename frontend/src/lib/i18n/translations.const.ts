@@ -2,6 +2,16 @@ import type { Translations } from "./translations.types";
 
 const translations: Translations = {
   en: {
+    "home.hero.complexity": "Built for real-world complexity",
+    "home.hero.areas.healthcare": "Healthcare",
+    "home.hero.areas.logistics": "Logistics",
+    "home.hero.areas.marketing": "Marketing",
+    "home.hero.areas.finance": "Finance",
+    "home.hero.areas.enterprise": "Enterprise platforms",
+    "home.hero.engineer": "Engineer",
+    "home.hero.software_title": "Software Engineer",
+    "home.hero.automation_title": "Control and Automation",
+    "home.hero.summary": "Engineer with 5+ years of experience in fullstack development, using Node.js, TypeScript, Python, Go, React, and Vue to build scalable web applications, APIs, and system integrations, with knowledge of software architecture, databases, and cloud infrastructure, as well as electrical engineering, analog and digital electronics, microcontrollers, embedded systems, instrumentation, and control and automation, combining these skills to develop solutions that connect interfaces, services, and physical devices.",
     "footer.resume": "Résumé",
     "footer.email": "Email",
     "footer.signature": "Software × Automation",
@@ -83,6 +93,16 @@ const translations: Translations = {
     "a11y.go_to_slide": "Go to slide {{index}}"
   },
   es: {
+    "home.hero.complexity": "Diseñado para la complejidad del mundo real",
+    "home.hero.areas.healthcare": "Salud",
+    "home.hero.areas.logistics": "Logística",
+    "home.hero.areas.marketing": "Marketing",
+    "home.hero.areas.finance": "Finanzas",
+    "home.hero.areas.enterprise": "Plataformas empresariales",
+    "home.hero.engineer": "Ingeniero",
+    "home.hero.software_title": "Ingeniero de Software",
+    "home.hero.automation_title": "Control y Automatización",
+    "home.hero.summary": "Ingeniero con más de 5 años de experiencia en desarrollo fullstack, utilizando Node.js, TypeScript, Python, Go, React y Vue en la creación de aplicaciones web escalables, APIs e integraciones entre sistemas, con conocimientos de arquitectura de software, bases de datos e infraestructura cloud, además de electricidad, electrónica analógica y digital, microcontroladores, sistemas embebidos, instrumentación y control y automatización, combinando estas competencias para desarrollar soluciones que conectan interfaces, servicios y dispositivos físicos.",
     "footer.resume": "Currículum",
     "footer.email": "Correo",
     "footer.signature": "Software × Automatización",
@@ -164,6 +184,16 @@ const translations: Translations = {
     "a11y.go_to_slide": "Ir a la diapositiva {{index}}"
   },
   br: {
+    "home.hero.complexity": "Projetado para a complexidade do mundo real",
+    "home.hero.areas.healthcare": "Saúde",
+    "home.hero.areas.logistics": "Logística",
+    "home.hero.areas.marketing": "Marketing",
+    "home.hero.areas.finance": "Finanças",
+    "home.hero.areas.enterprise": "Plataformas corporativas",
+    "home.hero.engineer": "Engenheiro",
+    "home.hero.software_title": "Engenheiro de Software",
+    "home.hero.automation_title": "Controle e Automação",
+    "home.hero.summary": "Engenheiro com mais de 5 anos de experiência em desenvolvimento fullstack, utilizando Node.js, TypeScript, Python, Go, React e Vue na construção de aplicações web escaláveis, APIs e integrações entre sistemas, com conhecimentos em arquitetura de software, bancos de dados e infraestrutura cloud, além de elétrica, eletrônica analógica e digital, microcontroladores, sistemas embarcados, instrumentação e controle e automação, combinando essas competências para desenvolver soluções que conectam interfaces, serviços e dispositivos físicos.",
     "footer.resume": "Currículo",
     "footer.email": "E-mail",
     "footer.signature": "Software × Automação",

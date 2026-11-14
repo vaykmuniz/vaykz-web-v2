@@ -1,65 +1,37 @@
 <script lang="ts">
 	import { t } from '$lib/i18n/translations';
-	import { onMount } from 'svelte';
-	import { Tween } from 'svelte/motion';
-
-	const TITLES = $derived([$t("home.titles_1"), $t("home.titles_2"), $t("home.titles_3")]);
-	const ABOUT_ME_PARAGRAPHS = $derived([
-		$t("home.about_me_description_1"),
-		$t("home.about_me_description_2"),
-		$t("home.about_me_description_3")
-	]);
-
-	const nameOpacity = new Tween(0, { duration: 700 });
-	const titlesOpacity = new Tween(0, { duration: 700 });
-	const aboutTitleOpacity = new Tween(0, { duration: 700 });
-	const aboutDescriptionOpacity = new Tween(0, { duration: 700 });
-
-	onMount(async () => {
-		await nameOpacity.set(0.5);
-		await titlesOpacity.set(1);
-		await aboutTitleOpacity.set(1);
-		await aboutDescriptionOpacity.set(1);
-	});
 </script>
 
-<svelte:options runes={true} />
+<section class="flex w-full flex-col items-start gap-4 py-6">
+	<p class="font-inter text-[11px] font-medium tracking-[1.8px] text-accent uppercase">
+		Gabriel R. A. S. Muniz <span class="mx-2">/</span> {$t('home.hero.engineer')}
+	</p>
 
+	<h1 class="hero-title w-full font-oswald text-4xl leading-[1.08] uppercase sm:text-6xl lg:text-[78px]">
+		<span class="block font-normal text-content">{$t('home.hero.software_title')}</span>
+		<span class="block font-light text-accent">{$t('home.hero.automation_title')}<span class="block">{$t('home.hero.engineer')} (UTFPR)</span></span>
+	</h1>
 
-<section class="h-full w-full flex flex-col items-start justify-start">
-
-	<div class="my-4 w-full flex flex-col items-start">
-		<h1
-			class="text-4xl uppercase font-thin tracking-widest font-oswald"
-			style:opacity={nameOpacity.current}
-		>
-			gabriel r. a. s. muniz
-		</h1>
-		<hr class="my-2 w-full md:w-1/4 h-px opacity-50"/>
-		
-		<div
-			class="flex flex-col font-sans tracking-widest"
-			style:opacity={titlesOpacity.current}
-		>
-			{#each TITLES as title}
-				<p>{title}</p>
-			{/each}
+	<p class="hero-summary max-w-[640px] lg:max-w-[960px] font-inter text-base leading-[1.55] text-muted md:text-lg">
+		{$t('home.hero.summary')}
+	</p>
+	<div class="mt-4 w-full border-y border-line py-4 font-inter">
+		<div class="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+			<p class="text-[10px] font-medium tracking-wide text-muted uppercase">
+				{$t('home.hero.complexity')}
+			</p>
+			<ul class="flex flex-wrap items-center gap-x-8 gap-y-4 text-base text-muted">
+				{#each ['healthcare', 'logistics', 'marketing', 'finance', 'enterprise'] as area}
+					<li>{$t(`home.hero.areas.${area}`)}</li>
+				{/each}
+			</ul>
 		</div>
 	</div>
-
-	<div class="h-full w-full flex flex-col items-start">
-		<h2
-			class="text-2xl font-oswald font-thin uppercase tracking-widest"
-			style:opacity={aboutTitleOpacity.current}
-		>
-			{$t("home.about_me_title")}
-		</h2>
-		<hr class="my-2 w-full md:w-1/4 h-px opacity-50"/>
-		<div class="w-full md:w-2/5 font-sans flex flex-col gap-4" style:opacity={aboutDescriptionOpacity.current}>
-			{#each ABOUT_ME_PARAGRAPHS as paragraph}
-				<p>{paragraph}</p>
-			{/each}
-		</div>
-	</div>
-
 </section>
+
+<style>
+ @media (min-width: 1024px) and (max-height: 800px) {
+  .hero-title { font-size: 56px; }
+  .hero-summary { font-size: 16px; line-height: 1.5; }
+ }
+</style>
