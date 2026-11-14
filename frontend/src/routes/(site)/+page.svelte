@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { t } from '$lib/i18n/translations';
+	import { t, locale } from '$lib/i18n/translations';
 	const areas = ['healthcare', 'logistics', 'marketing', 'finance', 'enterprise'];
 </script>
 
@@ -10,7 +10,7 @@
 
 	<h1 class="hero-title w-full font-oswald text-4xl leading-[1.08] uppercase sm:text-6xl lg:text-[78px]">
 		<span class="block font-normal text-content">{$t('home.hero.software_title')}</span>
-		<span class="block font-light text-accent">{$t('home.hero.automation_title')}<span class="block">{$t('home.hero.engineer')} (UTFPR)</span></span>
+		<span class="block font-light text-accent">{#if $locale === 'en'}{$t('home.hero.automation_title')}<span class="block">{$t('home.hero.engineer')} (UTFPR)</span>{:else}<span class="block">{$t('home.hero.engineer')} de</span>{$t('home.hero.automation_title')} (UTFPR){/if}</span>
 	</h1>
 
 	<p class="hero-summary max-w-[640px] lg:max-w-[960px] font-inter text-base leading-[1.55] text-muted md:text-lg">

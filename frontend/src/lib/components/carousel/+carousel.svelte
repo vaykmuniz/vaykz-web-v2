@@ -7,6 +7,7 @@
 
 	type Props = {
 		perPage?: PerPage;
+        variant?: 'default' | 'projects';
 		loop?: boolean;
 		autoplay?: number;
 		duration?: number;
@@ -25,6 +26,7 @@
 
 	let {
 		perPage = 3,
+        variant = 'default',
 		loop = true,
 		autoplay = 0,
 		duration = 200,
@@ -158,16 +160,16 @@
 	}
 </script>
 
-<div class="carousel">
+<div class="carousel" class:projects={variant === 'projects'}>
 	<div class="slides" bind:this={siemaNode}>
 		{@render children?.()}
 	</div>
-	{#if controls}
+	{#if controls && (variant !== 'projects' || pips.length > currentPerPage)}
 		<button class="left" onclick={left} use:resetInterval={autoplay} aria-label={$t("a11y.previous_slide")} type="button">
-			{@render leftControl?.()}
+			{#if leftControl}{@render leftControl()}{:else if variant === 'projects'}<svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24" fill="none" style="margin: auto"><path d="m13 5-7 7 7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg>{/if}
 		</button>
 		<button class="right" onclick={right} use:resetInterval={autoplay} aria-label={$t("a11y.next_slide")} type="button">
-			{@render rightControl?.()}
+			{#if rightControl}{@render rightControl()}{:else if variant === 'projects'}<svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24" fill="none" style="margin: auto"><path d="m11 5 7 7-7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg>{/if}
 		</button>
 	{/if}
 	{#if dots}
@@ -188,6 +190,19 @@
 </div>
 
 <style>
+ .projects { padding-inline: 48px; }
+ .projects .slides { display: block; overflow: hidden; }
+ .projects :global(.slides > div) { display: flex; align-items: stretch; }
+ .projects :global(.slides > div > div) { display: flex; height: auto; }
+ .projects :global(.slides > div > div > div) { display: flex; width: 100%; }
+ .projects :global(.slides article) { height: auto; flex: 1; }
+ .projects .left, .projects .right { width: 44px; height: 44px; z-index: 1; cursor: pointer; color: var(--color-accent); background: var(--color-surface); border: 1px solid var(--color-line); font-size: 30px; }
+ .projects .left { left: 0; }
+ .projects .right { right: 0; }
+ .projects .left:hover, .projects .right:hover { background: var(--color-elevated); }
+ .projects button:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+ .projects ul { position: static; margin-top: 16px; }
+
 	.carousel {
 		position: relative;
 		width: 100%;
