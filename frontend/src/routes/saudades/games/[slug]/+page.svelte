@@ -1,35 +1,36 @@
 <script lang="ts">
     import GameModal from '$lib/components/game-modal/+game-modal.svelte';
     import { t } from '$lib/i18n/translations';
-    import { marked } from 'marked';
-    import sanitizeHtml from 'sanitize-html';
+
+
 
     let { data } = $props();
     let showGameplay = $state(false);
 
     const game = $derived(data.game);
-    const gameContent = $derived(
-        sanitizeHtml(marked.parse(game.content, { async: false }) as string)
-    );
 </script>
 
-<div class="flex flex-col items-start justify-center gap-8 px-4 py-4">
-    <section class="flex w-full flex-col gap-2 px-5">
-        <h3 class="text-2xl opacity-50 uppercase font-thin tracking-widest font-oswald">{game.title}</h3>
+<svelte:head><title>{game.title} — Saudades</title><meta name="description" content={$t(`saudades.${game.slug}.description`)} /></svelte:head>
+<div class="flex flex-col gap-0">
+<a href="/saudades" class="mx-auto w-full max-w-7xl px-4 py-6 text-muted hover:text-accent sm:px-8">← {$t('saudades.back')}</a>
+<div class="saudades-diamonds bg-elevated"><img src={game.thumbnail} alt={game.title} class="mx-auto h-64 w-full max-w-7xl object-contain p-6 sm:h-96" /></div>
+    <div class="saudades-divider" aria-hidden="true"></div>
+    <section class="palette-dark-orange w-full bg-elevated text-content"><div class="mx-auto flex max-w-7xl flex-col gap-2 px-4 py-12 sm:px-8 sm:py-16">
+        <h1 class="text-4xl text-accent font-semibold">{game.title}</h1>
         <hr class="h-px w-full opacity-50 md:w-1/4" />
 
-        <div class="prose prose-invert mt-2 max-w-none font-sans">
-            {@html gameContent}
+        <div class="mt-2 max-w-none font-sans leading-relaxed">
+            <h2 class="text-xl text-content">{$t(`saudades.${game.slug}.summary`)}</h2><p class="mt-4 text-muted">{$t(`saudades.${game.slug}.description`)}</p>
         </div>
 
         <button
             type="button"
-            class="mt-2 w-fit border border-accent/50 px-4 py-2 text-sm uppercase tracking-widest transition-colors hover:bg-accent/10"
+            class="mt-6 w-fit bg-accent px-8 py-3 font-semibold text-on-accent hover:bg-accent-hover"
             onclick={() => (showGameplay = true)}
         >
             {$t("game.play")}
         </button>
-    </section>
+    </div></section>
 
     <GameModal
         open={showGameplay}
