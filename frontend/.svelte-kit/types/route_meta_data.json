@@ -7,6 +7,8 @@
 	"/saudades/games/[slug]": [
 		"src/routes/saudades/games/[slug]/+page.ts"
 	],
-	"/(site)/skills": [],
+	"/(site)/skills": [
+		"src/routes/(site)/skills/+page.server.ts"
+	],
 	"/(site)/software": []
 }

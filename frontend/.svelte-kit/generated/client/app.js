@@ -22,7 +22,7 @@ export const dictionary = {
 		"/(site)/projects": [6,[2]],
 		"/saudades": [9,[3]],
 		"/saudades/games/[slug]": [10,[3]],
-		"/(site)/skills": [7,[2]],
+		"/(site)/skills": [~7,[2]],
 		"/(site)/software": [8,[2]]
 	};
 
